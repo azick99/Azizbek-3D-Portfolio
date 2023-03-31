@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import { myPhoto } from '../assets'
 import { styles } from '../styles'
 import { ComputersCanvas } from './canvas'
 
@@ -12,14 +13,31 @@ const Hero = () => {
           <div className="w-5 h-5 rounded-full bg-[#915eff]" />
           <div className="w-1 sm:h-80 h-40 violet-gradient"></div>
         </div>
-        <div>
-          <h1 className={`${styles.heroHeadText} text-white`}>
-            Hi, I'm <span className="text-[#915eff]">Azizbek</span>
-          </h1>
-          <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            a Web Developer, user
-            <br className="sm:block hidden" /> interfaces and web applications
-          </p>
+        <div className="flex sm:flex-row flex-col gap-[60px]">
+          <div className="w-[70%]">
+            <h1 className={`${styles.heroHeadText} text-white`}>
+              Hi! I'm <span className="text-[#915eff]">Azizbek Yunusaliev</span>
+            </h1>
+            <p className={`${styles.heroSubText} mt-2 text-white-100`}>
+              a Web Developer.
+              <br className="sm:block hidden" />
+            </p>
+          </div>
+          <motion.div
+            animate={{ y: [0, 24, 0] }}
+            transition={{
+              duration: 1.5,
+              repeat: Infinity,
+              repeatType: 'loop',
+            }}
+            className="sm:block hidden "
+          >
+            <img
+              src={myPhoto}
+              alt="avatar"
+              className="w-[170px] h-[200px] shadow-xl shadow-black rounded-lg"
+            />
+          </motion.div>
         </div>
       </div>
       <ComputersCanvas />

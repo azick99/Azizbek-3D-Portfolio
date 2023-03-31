@@ -20,6 +20,11 @@ import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
+import myPhoto from "./my-photo.jpg"
+import download from "./download-solid.svg"
+import eductaion from './education.png'
+import graduationHat from './graduation-hat.png'
+import school from './school.png'
 
 import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
@@ -31,6 +36,10 @@ import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 
 export {
+  download,
+  eductaion,
+  graduationHat,
+  school,
   logo,
   logo2,
   backend,
@@ -60,4 +69,5 @@ export {
   carrent,
   jobit,
   tripguide,
+  myPhoto,
 };
