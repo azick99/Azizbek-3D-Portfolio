@@ -1,0 +1,15 @@
+.tab {
+    margin-right: 5px;
+    transition: all .4s ease-in-out;
+
+    &:hover {
+        transform: translateY(-5px);
+        color: #915eff;
+        border-color: #915eff9f;
+    }
+}
+
+.tab-active {
+    border-color: #915eff;
+    color: #915eff;
+}

@@ -73,6 +73,33 @@ const services = [
   },
 ]
 
+const techProgresses = [
+  {
+    name: 'HTML5',
+    percent: 80,
+  },
+  {
+    name: 'CSS3',
+    percent: 68,
+  },
+  {
+    name: 'JAVASCRIPT',
+    percent: 70,
+  },
+  {
+    name: 'REACT JS',
+    percent: 65,
+  },
+  {
+    name: 'TYPESCRIPT',
+    percent: 30,
+  },
+  {
+    name: 'TAILWIND',
+    percent: 45,
+  },
+]
+
 const technologies = [
   {
     name: 'HTML 5',
@@ -208,6 +235,69 @@ const projects = [
     source_code_link: 'https://github.com/',
   },
   {
+    name: 'Car Ren',
+    description:
+      'Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportaion needs.',
+    tags: [
+      {
+        name: 'reat',
+        color: 'blue-text-radient',
+      },
+      {
+        name: 'mongodb',
+        color: 'green-txt-gradient',
+      },
+      {
+        name: 'tailwind',
+        color: 'pink-txt-gradient',
+      },
+    ],
+    image: carrent,
+    source_code_link: 'https://github.com/',
+  },
+  {
+    name: 'Car Ren',
+    description:
+      'Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportaion needs.',
+    tags: [
+      {
+        name: 'reat',
+        color: 'blue-text-radient',
+      },
+      {
+        name: 'mongodb',
+        color: 'green-txt-gradient',
+      },
+      {
+        name: 'tailwind',
+        color: 'pink-txt-gradient',
+      },
+    ],
+    image: carrent,
+    source_code_link: 'https://github.com/',
+  },
+  {
+    name: 'Car Ren',
+    description:
+      'Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportaion needs.',
+    tags: [
+      {
+        name: 'reat',
+        color: 'blue-text-radient',
+      },
+      {
+        name: 'mongodb',
+        color: 'green-txt-gradient',
+      },
+      {
+        name: 'tailwind',
+        color: 'pink-txt-gradient',
+      },
+    ],
+    image: carrent,
+    source_code_link: 'https://github.com/',
+  },
+  {
     name: 'Job IT',
     description:
       'Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.',
@@ -251,4 +341,11 @@ const projects = [
   },
 ]
 
-export { services, technologies, experiences, testimonials, projects }
+export {
+  services,
+  technologies,
+  experiences,
+  testimonials,
+  projects,
+  techProgresses,
+}
