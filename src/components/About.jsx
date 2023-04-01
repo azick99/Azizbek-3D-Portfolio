@@ -42,7 +42,7 @@ const About = () => {
       <div className="about-container">
         <motion.p
           variants={slideIn('left', 'tween', 0.2, 1)}
-          className="mt-4 text-secondary text-[17px] leading-[30px] sm:pr-[80px] pr-[0] "
+          className="about-text mt-4 text-secondary text-[17px] leading-[30px] sm:pr-[80px] pr-[0] max-auto"
         >
           I'm a <b className="text-[#915eff]">Front-end developer</b> with a
           passion for creating beautiful, user-friendly websites. Although I
