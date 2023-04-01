@@ -1,9 +1,32 @@
 import { motion } from 'framer-motion'
-import { myPhoto } from '../assets'
+import { useEffect, useState } from 'react'
 import { styles } from '../styles'
 import { ComputersCanvas } from './canvas'
 
 const Hero = () => {
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    // Add a listener for changes to the screen size
+    const mediaQuery = window.matchMedia('(max-width: 400px)')
+
+    // Set the initial value of the `isMobile` state variable
+    setIsMobile(mediaQuery.matches)
+
+    // Define a callback function to handle changes to the media query
+    const handleMediaQueryChange = (event) => {
+      setIsMobile(event.matches)
+    }
+
+    // Add the callback function as a listener for changes to the media query
+    mediaQuery.addEventListener('change', handleMediaQueryChange)
+
+    // Remove the listener when the component is unmounted
+    return () => {
+      mediaQuery.removeEventListener('change', handleMediaQueryChange)
+    }
+  }, [])
+
   return (
     <section className="relative w-full h-screen mx-auto">
       <div
@@ -13,34 +36,22 @@ const Hero = () => {
           <div className="w-5 h-5 rounded-full bg-[#915eff]" />
           <div className="w-1 sm:h-80 h-40 violet-gradient"></div>
         </div>
-        <div className="flex sm:flex-row flex-col gap-[60px]">
-          <div className="w-[70%]">
-            <h1 className={`${styles.heroHeadText} text-white`}>
-              Hi! I'm <span className="text-[#915eff]">Azizbek Yunusaliev</span>
-            </h1>
-            <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-              a Web Developer.
-              <br className="sm:block hidden" />
-            </p>
-          </div>
-          <motion.div
-            animate={{ y: [0, 24, 0] }}
-            transition={{
-              duration: 1.5,
-              repeat: Infinity,
-              repeatType: 'loop',
-            }}
-            className="sm:block hidden "
-          >
-            <img
-              src={myPhoto}
-              alt="avatar"
-              className="w-[170px] h-[200px] shadow-xl shadow-black rounded-lg"
-            />
-          </motion.div>
+        <div>
+          <h1 className={`${styles.heroHeadText} text-white`}>
+            Hi there! I'm{' '}
+            <span className="text-[#915eff]">Azizbek Yunusaliev</span>
+          </h1>
+          <p className={`${styles.heroSubText} mt-2 text-white-100`}>
+            a Web Developer.
+            <br className="sm:block hidden" />
+          </p>
         </div>
       </div>
-      <ComputersCanvas />
+      {isMobile ? (
+        ''
+      ) : (
+          <ComputersCanvas />
+      )}
       <div className="absolute xs:bottom-5 bottom-20 w-full flex justify-center items-center">
         <a href="#about">
           <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">

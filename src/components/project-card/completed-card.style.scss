@@ -56,21 +56,7 @@
     }
 }
 
-@media screen and (max-width:600px) {
-
-    //About Section 
-    .about-container {
-        grid-template-columns: 1fr;
-        text-align: justify;
-
-        .right-about {
-            grid-template-columns: 1fr;
-            padding-top: 2.5rem;
-        }
-    }
-}
-
-@media screen and (max-width:900px) {
+@media (max-width:900px) {
 
     //About Section 
     .about-container {
@@ -79,6 +65,20 @@
 
         .right-about {
             grid-template-columns: repeat(2, 1fr);
+            padding-top: 2.5rem;
+        }
+    }
+}
+
+@media (max-width:600px) {
+
+    //About Section 
+    .about-container {
+        grid-template-columns: 1fr;
+        text-align: justify;
+
+        .right-about {
+            grid-template-columns: 1fr;
             padding-top: 2.5rem;
         }
     }
