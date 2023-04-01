@@ -41,7 +41,7 @@ const About = () => {
       </motion.div>
       <div className="about-container">
         <motion.p
-          variants={slideIn('left', 'tween', 0.2, 1)}
+          variants={fadeIn('left', 'tween', 0.5, 0.75)}
           className="mt-4 text-secondary text-[17px] leading-[30px] sm:pr-[80px] pr-[0] max-auto"
         >
           I'm a <b className="text-[#915eff]">Front-end developer</b> with a
@@ -66,7 +66,7 @@ const About = () => {
           <br />
           <DownloadButton />
         </motion.p>
-        <motion.div variants={slideIn('right', 'tween', 0.2, 1)} className="right-about">
+        <motion.div variants={fadeIn('right', 'tween', 0.5, 0.75)} className="right-about">
           {completes.map((complete) => (
             <CompletedCard key={complete.text} complete={complete} />
           ))}

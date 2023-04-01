@@ -11,13 +11,19 @@ import {
   tailwind,
   git,
   figma,
-  carrent,
-  jobit,
-  tripguide,
   threejs,
   eductaion,
   school,
   graduationHat,
+  crown,
+  space,
+  sneakers,
+  gpt,
+  bookmark,
+  intro,
+  calculator,
+  news,
+  social,
 } from '../assets'
 
 export const navLinks = [
@@ -212,132 +218,238 @@ const testimonials = [
   },
 ]
 
+let projectId = 1
+
 const projects = [
   {
-    name: 'Car Rent',
+    id: projectId++,
+    name: 'Crown Clothing',
     description:
-      'Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.',
+      'Fully functional e-commerce web app with carts, payments and supported by database. Google Authorization is also available.',
     tags: [
       {
         name: 'react',
         color: 'blue-text-gradient',
       },
       {
-        name: 'mongodb',
+        name: 'firebase',
+        color: 'orange-text-gradient',
+      },
+      {
+        name: 'redux',
+        color: 'violet-text-gradient',
+      },
+      {
+        name: 'react-router',
         color: 'green-text-gradient',
       },
+    ],
+    image: crown,
+    url: 'https://whimsical-cendol-8c17e3.netlify.app',
+    source_code_link: 'https://github.com/azick99/Clothing-shop',
+  },
+  {
+    id: projectId++,
+    name: 'Space Tourism',
+    description:
+      'Brief information of space tourism working with design and layouts, it can be used as entrance for space information.',
+    tags: [
       {
-        name: 'tailwind',
+        name: 'html5',
+        color: 'orange-text-gradient',
+      },
+      {
+        name: 'sass',
         color: 'pink-text-gradient',
       },
-    ],
-    image: carrent,
-    source_code_link: 'https://github.com/',
-  },
-  {
-    name: 'Car Ren',
-    description:
-      'Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportaion needs.',
-    tags: [
       {
-        name: 'reat',
-        color: 'blue-text-radient',
+        name: 'responsive',
+        color: 'violet-text-gradient',
       },
       {
-        name: 'mongodb',
-        color: 'green-txt-gradient',
-      },
-      {
-        name: 'tailwind',
-        color: 'pink-txt-gradient',
+        name: 'javascript',
+        color: 'yellow-text-gradient',
       },
     ],
-    image: carrent,
-    source_code_link: 'https://github.com/',
+    image: space,
+    url: 'https://azick99.github.io/Space-Tourism',
+    source_code_link: 'https://github.com/azick99/Space-Tourism',
   },
   {
-    name: 'Car Ren',
+    id: projectId++,
+    name: 'Sneakers Shop',
     description:
-      'Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportaion needs.',
-    tags: [
-      {
-        name: 'reat',
-        color: 'blue-text-radient',
-      },
-      {
-        name: 'mongodb',
-        color: 'green-txt-gradient',
-      },
-      {
-        name: 'tailwind',
-        color: 'pink-txt-gradient',
-      },
-    ],
-    image: carrent,
-    source_code_link: 'https://github.com/',
-  },
-  {
-    name: 'Car Ren',
-    description:
-      'Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportaion needs.',
-    tags: [
-      {
-        name: 'reat',
-        color: 'blue-text-radient',
-      },
-      {
-        name: 'mongodb',
-        color: 'green-txt-gradient',
-      },
-      {
-        name: 'tailwind',
-        color: 'pink-txt-gradient',
-      },
-    ],
-    image: carrent,
-    source_code_link: 'https://github.com/',
-  },
-  {
-    name: 'Job IT',
-    description:
-      'Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.',
+      'Mainly same as Crown clothing but with better design and some additional features like home page counter and auth picture.',
     tags: [
       {
         name: 'react',
         color: 'blue-text-gradient',
       },
       {
-        name: 'restapi',
-        color: 'green-text-gradient',
+        name: 'firebase',
+        color: 'orange-text-gradient',
       },
       {
-        name: 'scss',
+        name: 'sass',
         color: 'pink-text-gradient',
       },
+      {
+        name: 'react-router',
+        color: 'green-text-gradient',
+      },
     ],
-    image: jobit,
+    image: sneakers,
+    url: 'https://effortless-cassata-2d5f5f.netlify.app/',
     source_code_link: 'https://github.com/',
   },
   {
-    name: 'Trip Guide',
+    id: projectId++,
+    name: 'Chat Gpt3',
     description:
-      'A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.',
+      'Web app has no functionality only design and navigation, basic information about chat-gpt3.',
     tags: [
       {
-        name: 'nextjs',
+        name: 'react',
         color: 'blue-text-gradient',
       },
       {
-        name: 'supabase',
-        color: 'green-text-gradient',
+        name: 'responsive',
+        color: 'violet-text-gradient',
       },
       {
-        name: 'css',
+        name: 'sass',
         color: 'pink-text-gradient',
       },
     ],
-    image: tripguide,
-    source_code_link: 'https://github.com/',
+    image: gpt,
+    url: 'https://magnificent-cucurucho-c14116.netlify.app',
+    source_code_link: 'https://github.com/azick99/gpt-azicom',
+  },
+  {
+    id: projectId++,
+    name: 'Bookmark Landing',
+    description:
+      'Web page without functionality, a good temple to play around and see.',
+    tags: [
+      {
+        name: 'sass',
+        color: 'pink-text-gradient',
+      },
+      {
+        name: 'html5',
+        color: 'blue-text-gradient',
+      },
+      {
+        name: 'responsive',
+        color: 'violet-text-gradient',
+      },
+    ],
+    image: bookmark,
+    url: 'https://glittering-kangaroo-f0347f.netlify.app/',
+    source_code_link: 'https://github.com/azick99/Book-mark-landing',
+  },
+  {
+    id: projectId++,
+    name: 'Intro landing',
+    description: 'Web page without functionality,with mobile navigation',
+    tags: [
+      {
+        name: 'sass',
+        color: 'pink-text-gradient',
+      },
+      {
+        name: 'responsive',
+        color: 'violet-text-gradient',
+      },
+      {
+        name: 'html5',
+        color: 'blue-text-gradient',
+      },
+      {
+        name: 'javascript',
+        color: 'orange-text-gradient',
+      },
+    ],
+    image: intro,
+    url: 'https://azick99.github.io/Intro-with-drop-navigation',
+    source_code_link: 'https://github.com/azick99/Intro-with-drop-navigation',
+  },
+  {
+    id: projectId++,
+    name: 'Tip Calculator',
+    description:
+      'Small and handy tip calculator you can calculate percentage of tips and outputs easy and smoothly working.',
+    tags: [
+      {
+        name: 'sass',
+        color: 'pink-text-gradient',
+      },
+      {
+        name: 'responsive',
+        color: 'violet-text-gradient',
+      },
+      {
+        name: 'react',
+        color: 'blue-text-gradient',
+      },
+    ],
+    image: calculator,
+    url: 'https://spectacular-fox-9912be.netlify.app/',
+    source_code_link: 'https://github.com/azick99/tip-calculator',
+  },
+  {
+    id: projectId++,
+    name: 'News Homepage',
+    description:
+      'Web page has no big functionality mainly styled some additon for mobile. Designed by front-mentor.',
+    tags: [
+      {
+        name: 'responsive',
+        color: 'violet-text-gradient',
+      },
+      {
+        name: 'sass',
+        color: 'pink-text-gradient',
+      },
+      {
+        name: 'bootstrap5',
+        color: 'blue-text-gradient',
+      },
+      {
+        name: 'html5',
+        color: 'orange-text-gradient',
+      },
+    ],
+    image: news,
+    url: 'https://azick99.github.io/Home-page-news/',
+    source_code_link: 'https://github.com/azick99/Home-page-news',
+  },
+  {
+    id: projectId++,
+    name: 'Social Proof Section',
+    description:
+      'Web page has no big functionality mainly styled some additon for mobile. Designed by front-mentor.',
+    tags: [
+      {
+        name: 'responsive',
+        color: 'violet-text-gradient',
+      },
+      {
+        name: 'w3_school(css framework)',
+        color: 'green-text-gradient',
+      },
+      {
+        name: 'bootstrap5',
+        color: 'blue-text-gradient',
+      },
+      {
+        name: 'html5',
+        color: 'orange-text-gradient',
+      },
+    ],
+    image: social,
+    url: 'https://azick99.github.io/Social-proof-section/',
+    source_code_link: 'https://github.com/azick99/Social-proof-section',
   },
 ]
 

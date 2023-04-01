@@ -4,12 +4,12 @@
 
     &:hover {
         transform: translateY(-5px);
-        color: #915eff;
-        border-color: #915eff9f;
+        color: #915effa3;
+        border-color: #915eff7e;
     }
 }
 
 .tab-active {
     border-color: #915eff;
-    color: #915eff;
+    color: #915eff !important;
 }
