@@ -3,9 +3,9 @@ import './download-button.style.scss'
 
 const DownloadButton = () => {
   return (
-    <a href="#" className="download-btn w-[264px]" download>
+    <a href="#" className="download-btn" download>
       <span className="btn-text">Download CV</span>
-      <span className="btn-icon">
+      <span className="btn-icon ">
         <img
           src={download}
           alt="download-icon"

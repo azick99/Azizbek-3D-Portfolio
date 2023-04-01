@@ -40,35 +40,33 @@ const About = () => {
         </div>
       </motion.div>
       <div className="about-container">
-        <motion.div variants={slideIn('left', 'tween', 0.2, 1)}>
-          <p className="about-text mt-4 text-secondary text-[17px] leading-[30px] sm:pr-[80px] pr-[0] max-auto">
-            I'm a <b className="text-[#915eff]">Front-end developer</b> with a
-            passion for creating beautiful, user-friendly websites. Although I
-            don't have any commercial work experience, I've spent
-            <b className="text-[#915eff]"> countless hours</b> honing my skills
-            and building my portfolio.
-            <br />
-            <br />
-            My interest in web development started when I took an introductory
-            course in <b className="text-[#915eff]">HTML and CSS in college</b>.
-            I was immediately hooked and spent every spare moment working on
-            personal projects and learning new skills. Since then, I've become
-            proficient in
-            <b className="text-[#915eff]">JavaScript, React,</b> and other
-            front-end technologies.
-            <br />
-            <br />I know that there are lots of great things which I must{' '}
-            <b className="text-[#915eff]">learn</b>, make mistakes and try hard
-            to be the best developer so now I am ready for all of challenges and
-            difficulties in <b className="text-[#915eff]">my journey</b>
-            <br />
-          </p>
-          <DownloadButton />
-        </motion.div>
-        <motion.div
-          variants={slideIn('right', 'tween', 0.2, 1)}
-          className="right-about"
+        <motion.p
+          variants={slideIn('left', 'tween', 0.2, 1)}
+          className="mt-4 text-secondary text-[17px] leading-[30px] sm:pr-[80px] pr-[0] max-auto"
         >
+          I'm a <b className="text-[#915eff]">Front-end developer</b> with a
+          passion for creating beautiful, user-friendly websites. Although I
+          don't have any commercial work experience, I've spent
+          <b className="text-[#915eff]"> countless hours</b> honing my skills
+          and building my portfolio.
+          <br />
+          <br />
+          My interest in web development started when I took an introductory
+          course in <b className="text-[#915eff]">HTML and CSS in college</b>. I
+          was immediately hooked and spent every spare moment working on
+          personal projects and learning new skills. Since then, I've become
+          proficient in
+          <b className="text-[#915eff]">JavaScript, React,</b> and other
+          front-end technologies.
+          <br />
+          <br />I know that there are lots of great things which I must{' '}
+          <b className="text-[#915eff]">learn</b>, make mistakes and try hard to
+          be the best developer so now I am ready for all of challenges and
+          difficulties in <b className="text-[#915eff]">my journey</b>
+          <br />
+          <DownloadButton />
+        </motion.p>
+        <motion.div variants={slideIn('right', 'tween', 0.2, 1)} className="right-about">
           {completes.map((complete) => (
             <CompletedCard key={complete.text} complete={complete} />
           ))}

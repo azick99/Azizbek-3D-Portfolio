@@ -93,7 +93,7 @@ const Works = () => {
           development.
         </motion.p>
       </div>
-      <ul class="list-reset flex justify-center mt-10 gap-5">
+      <ul className="list-reset flex justify-center mt-10 gap-5">
         <Tab text="Major Porjects" />
         <Tab text="Style Projects" />
         <Tab text="Small and Sweet" />
