@@ -5,6 +5,7 @@ import { styles } from '../styles'
 import { slideIn } from '../utils/motion'
 import { EarthCanvas } from './canvas'
 import emailjs from '@emailjs/browser'
+import useIsMobile from '../utils/useIsMobile'
 
 const Contact = () => {
   const formRef = useRef()
@@ -53,7 +54,7 @@ const Contact = () => {
         }
       )
   }
-
+  const isMobile = useIsMobile()
   return (
     <div className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden">
       <motion.div
@@ -112,12 +113,16 @@ const Contact = () => {
           </button>
         </form>
       </motion.div>
-      <motion.div
-        variants={slideIn('right', 'tween', 0.2, 1)}
-        className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
-      >
-        <EarthCanvas />
-      </motion.div>
+      {isMobile ? (
+        ''
+      ) : (
+        <motion.div
+          variants={slideIn('right', 'tween', 0.2, 1)}
+          className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
+        >
+          <EarthCanvas />
+        </motion.div>
+      )}
     </div>
   )
 }
