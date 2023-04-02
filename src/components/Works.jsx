@@ -23,7 +23,7 @@ const ProjectCard = ({ index, project }) => {
             className="w-full h-full object-cover rounded-2xl"
           />
         </div>
-        <div className="absolute inset-0 flex justify-end m-3 card-img-hover">
+        <div className=" flex justify-end m-3 card-img-hover">
           <div
             onClick={() => window.open(source_code_link, '_blank')}
             className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer mr-2  "
