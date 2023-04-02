@@ -5,10 +5,8 @@ import { technologies, techProgresses } from '../constants'
 import { textVariant } from '../utils/motion.js'
 import { styles } from '../styles'
 import Progress from './progress/Progress'
-import useIsMobile from '../utils/useIsMobile'
 
 const Tech = () => {
-  const isMobile = useIsMobile()
   return (
     <>
       <motion.div
@@ -34,17 +32,13 @@ const Tech = () => {
           />
         ))}
       </motion.div>
-      {isMobile ? (
-        ''
-      ) : (
-        <div className="flex flex-row flex-wrap justify-center gap-10">
+        <div className="sm:flex flex-row flex-wrap justify-center gap-10  hidden">
           {technologies.map((technology) => (
             <div className="w-28 h-28" key={technology.name}>
               <BallCanvas icon={technology.icon} />
             </div>
           ))}
         </div>
-      )}
     </>
   )
 }

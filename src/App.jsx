@@ -3,12 +3,12 @@ import {
   About,
   Contact,
   Experience,
-  Feedbacks,
   Hero,
   Navbar,
   Tech,
   Works,
   StarsCanvas,
+  AboutMe,
 } from './components'
 function App() {
   return (
@@ -22,7 +22,7 @@ function App() {
         <Experience />
         <Tech />
         <Works />
-        <Feedbacks />
+        <AboutMe/>
         <div className="relative z-0">
           <Contact />
           <StarsCanvas />

@@ -26,7 +26,7 @@ const ProjectCard = ({ index, project }) => {
         <div className="absolute inset-0 flex justify-end m-3 card-img-hover">
           <div
             onClick={() => window.open(source_code_link, '_blank')}
-            className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer mr-2"
+            className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer mr-2  "
           >
             <img
               src={github}
@@ -36,7 +36,7 @@ const ProjectCard = ({ index, project }) => {
           </div>
           <div
             onClick={() => window.open(url, '_blank')}
-            className=" bg-slate-300 w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
+            className=" bg-slate-300 w-10 h-10 rounded-full flex justify-center items-center cursor-pointer  "
           >
             <img
               src={website}
@@ -83,14 +83,10 @@ const Works = () => {
           variants={fadeIn('', '', 0.1, 1)}
           className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px] text-center"
         >
-          Description of Projects with high desire to <b>learn new skills</b>{' '}
-          and working with team. After graduation, I started to deep dive into
-          IT and chose web developing as a main field of my career, same time
-          improve my communication and organization skills. As, I had good
-          knowledge in English I worked at some schools and costumer services,
-          in free time enhance <b>Front-end knowledge</b>. Had gained the
-          skills, I decided to go abroad and continue my career in web
-          development.
+          Description of Projects is written down with tools I used. Most
+          projects are done recently, around 3 months period with new tools. I
+          don't want to show my old projects due to most of them old tools and
+          after rewview I didn't like it.
         </motion.p>
       </div>
       <ul className="list-reset flex justify-center mt-10 gap-5">
