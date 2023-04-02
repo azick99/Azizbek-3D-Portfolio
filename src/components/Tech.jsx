@@ -32,7 +32,7 @@ const Tech = () => {
           />
         ))}
       </motion.div>
-        <div className="sm:flex flex-row flex-wrap justify-center gap-10  hidden">
+        <div className="sm:flex flex-row flex-wrap justify-center gap-10 hidden">
           {technologies.map((technology) => (
             <div className="w-28 h-28" key={technology.name}>
               <BallCanvas icon={technology.icon} />
