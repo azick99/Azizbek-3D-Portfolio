@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion'
 import { useState } from 'react'
-import Tilt from 'react-tilt'
 import { github, website } from '../assets'
 import { projects } from '../constants'
 import { SectionWrapper } from '../hoc'
@@ -12,10 +11,7 @@ const ProjectCard = ({ index, project }) => {
   const { name, description, image, source_code_link, tags, url } = project
   return (
     <motion.div variants={fadeIn('up', 'spring', index * 0.5, 0.75)}>
-      <Tilt
-        option={{ max: 45, scale: 1, speed: 450 }}
-        className="bg-tertiary p-5 rounded-2xl sm:w-[350px]  w-full"
-      >
+      <div className="bg-tertiary p-5 rounded-2xl sm:w-[350px]  w-full">
         <div className="relative w-full h-[230px] ">
           <img
             src={image}
@@ -56,7 +52,7 @@ const ProjectCard = ({ index, project }) => {
             </p>
           ))}
         </div>
-      </Tilt>
+      </div>
     </motion.div>
   )
 }
