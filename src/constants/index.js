@@ -26,6 +26,7 @@ import {
   social,
   multi,
   shorten,
+  portfolio,
 } from '../assets'
 
 export const navLinks = [
@@ -295,30 +296,30 @@ const projects = [
   },
   {
     id: projectId++,
-    name: 'Sneakers Shop',
+    name: ' My Portflio 2.0',
     description:
-      'Mainly same as Crown clothing but with better design and some additional features like home page counter and auth picture.',
+      'My first portfolio that I did, it is fully functional except forms well-designed and can switch dark, light mode. ',
     tags: [
-      {
-        name: 'react',
-        color: 'blue-text-gradient',
-      },
-      {
-        name: 'firebase',
-        color: 'orange-text-gradient',
-      },
       {
         name: 'sass',
         color: 'pink-text-gradient',
       },
       {
-        name: 'react-router',
-        color: 'green-text-gradient',
+        name: 'responsive',
+        color: 'violet-text-gradient',
+      },
+      {
+        name: 'javascript',
+        color: 'yellow-text-gradient',
+      },
+      {
+        name: 'html5',
+        color: 'orange-text-gradient',
       },
     ],
-    image: sneakers,
-    url: 'https://effortless-cassata-2d5f5f.netlify.app/',
-    source_code_link: 'https://github.com/',
+    image: portfolio,
+    url: 'https://azick99.github.io/My-Portflio-2.0',
+    source_code_link: 'https://github.com/azick99/My-Portflio-2.0',
   },
   {
     id: projectId++,
@@ -489,8 +490,8 @@ const projects = [
       },
     ],
     image: multi,
-    url: 'https://github.com/azick99/Multi-step-form',
-    source_code_link: 'https://radiant-maamoul-f5d488.netlify.app/',
+    url: 'https://radiant-maamoul-f5d488.netlify.app/',
+    source_code_link: 'https://github.com/azick99/Multi-step-form',
   },
   {
     id: projectId++,
@@ -514,6 +515,34 @@ const projects = [
     image: shorten,
     url: 'https://benevolent-swan-102734.netlify.app/',
     source_code_link: 'https://github.com/azick99/Shorten-Url',
+  },
+
+  {
+    id: projectId++,
+    name: 'Sneakers Shop',
+    description:
+      'E-commerce web App with user-friendly design and some features like home page counter, stripe card payment and auth.Light weight and it\'s still in the proccess of development that can improve its functionality.',
+    tags: [
+      {
+        name: 'react',
+        color: 'blue-text-gradient',
+      },
+      {
+        name: 'firebase',
+        color: 'orange-text-gradient',
+      },
+      {
+        name: 'sass',
+        color: 'pink-text-gradient',
+      },
+      {
+        name: 'react-router',
+        color: 'green-text-gradient',
+      },
+    ],
+    image: sneakers,
+    url: 'https://effortless-cassata-2d5f5f.netlify.app/',
+    source_code_link: 'https://github.com/azick99/Sneakers-shop',
   },
 ]
 

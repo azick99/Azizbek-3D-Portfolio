@@ -7,16 +7,14 @@ import { styles } from '../styles'
 import { fadeIn, textVariant } from '../utils/motion'
 import Tab from './tab/Tab'
 
-const ProjectCard = ({ index, project, indexed }) => {
+const ProjectCard = ({ index, project }) => {
   const { name, description, image, source_code_link, tags, url } = project
   return (
     <motion.div
       variants={fadeIn('up', 'spring', index * 0.5, 0.75)}
-      className={
-        name === 'Social Proof Section' && indexed === 11 ? 'hidden' : ''
-      }
+
     >
-      <div className="bg-tertiary p-5 rounded-2xl sm:w-[350px]  w-full">
+      <div className="bg-tertiary p-5 rounded-2xl sm:w-[350px] relative  w-full">
         <div className="relative w-full h-[230px] ">
           <img
             src={image}
@@ -24,7 +22,7 @@ const ProjectCard = ({ index, project, indexed }) => {
             className="w-full h-full object-cover rounded-2xl"
           />
         </div>
-        <div className=" flex justify-end m-3 card-img-hover">
+        <div className=" flex justify-end m-3 absolute top-0 right-0">
           <div
             onClick={() => window.open(source_code_link, '_blank')}
             className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer mr-2  "
@@ -63,7 +61,7 @@ const ProjectCard = ({ index, project, indexed }) => {
 }
 
 const Works = () => {
-  const [indexed, setIndex] = useState(11)
+  const [indexed, setIndex] = useState(12)
   return (
     <>
       <motion.div
@@ -91,7 +89,7 @@ const Works = () => {
         </motion.p>
       </div>
       <ul className="list-reset flex justify-center mt-10 gap-5">
-        <Tab text="New Projects" num={11} setIndex={setIndex} index={indexed} />
+        <Tab text="New Projects" num={12} setIndex={setIndex} index={indexed} />
         <Tab
           text="Major Porjects"
           num={3}
@@ -122,9 +120,9 @@ const Works = () => {
               return indexed <= p.id + 2 && indexed >= p.id
             }
             if (indexed === 9) {
-              return indexed <= p.id + 2
+              return indexed <= p.id + 2 
             }
-            if (indexed === 11) {
+            if (indexed === 12) {
               return indexed <= p.id + 2
             }
           })

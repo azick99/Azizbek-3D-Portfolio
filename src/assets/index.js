@@ -38,6 +38,7 @@ import news from './project-img/news-homepage.jpg'
 import social from './project-img/social-proof.jpg'
 import multi from './project-img/multi-step.jpg'
 import shorten from './project-img/shorten-url.jpg'
+import portfolio from './project-img/first-portfolio.jpg'
 
 export {
   website,
@@ -80,4 +81,5 @@ export {
   social,
   multi,
   shorten,
+  portfolio,
 }
