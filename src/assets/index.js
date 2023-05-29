@@ -36,6 +36,8 @@ import intro from './project-img/intro-landing.jpg'
 import calculator from './project-img/tip-calculator.jpg'
 import news from './project-img/news-homepage.jpg'
 import social from './project-img/social-proof.jpg'
+import multi from './project-img/multi-step.jpg'
+import shorten from './project-img/shorten-url.jpg'
 
 export {
   website,
@@ -76,4 +78,6 @@ export {
   calculator,
   news,
   social,
+  multi,
+  shorten,
 }

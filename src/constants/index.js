@@ -24,6 +24,8 @@ import {
   calculator,
   news,
   social,
+  multi,
+  shorten,
 } from '../assets'
 
 export const navLinks = [
@@ -466,6 +468,52 @@ const projects = [
     image: social,
     url: 'https://azick99.github.io/Social-proof-section/',
     source_code_link: 'https://github.com/azick99/Social-proof-section',
+  },
+  {
+    id: projectId++,
+    name: 'Multi step form',
+    description:
+      'Web app has all functionality, pretty user-friendly design and step by step form with smooth changing pages. User can come back pervious steps and it can be completed if user does not fill all of form field that required.  ',
+    tags: [
+      {
+        name: 'react',
+        color: 'blue-text-gradient',
+      },
+      {
+        name: 'responsive',
+        color: 'violet-text-gradient',
+      },
+      {
+        name: 'sass',
+        color: 'pink-text-gradient',
+      },
+    ],
+    image: multi,
+    url: 'https://github.com/azick99/Multi-step-form',
+    source_code_link: 'https://radiant-maamoul-f5d488.netlify.app/',
+  },
+  {
+    id: projectId++,
+    name: 'Shorten Url',
+    description:
+      'Web page is fully functional, well-designed page with working shortening input and smooth scroll animation in navigation. Web app can shorten long and ugly urls to short and better urls.',
+    tags: [
+      {
+        name: 'tailwind-css',
+        color: 'blue-text-gradient',
+      },
+      {
+        name: 'react',
+        color: 'green-text-gradient',
+      },
+      {
+        name: 'responsive',
+        color: 'orange-text-gradient',
+      },
+    ],
+    image: shorten,
+    url: 'https://benevolent-swan-102734.netlify.app/',
+    source_code_link: 'https://github.com/azick99/Shorten-Url',
   },
 ]
 

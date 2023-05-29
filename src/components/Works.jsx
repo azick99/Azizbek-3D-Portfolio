@@ -7,10 +7,15 @@ import { styles } from '../styles'
 import { fadeIn, textVariant } from '../utils/motion'
 import Tab from './tab/Tab'
 
-const ProjectCard = ({ index, project }) => {
+const ProjectCard = ({ index, project, indexed }) => {
   const { name, description, image, source_code_link, tags, url } = project
   return (
-    <motion.div variants={fadeIn('up', 'spring', index * 0.5, 0.75)}>
+    <motion.div
+      variants={fadeIn('up', 'spring', index * 0.5, 0.75)}
+      className={
+        name === 'Social Proof Section' && indexed === 11 ? 'hidden' : ''
+      }
+    >
       <div className="bg-tertiary p-5 rounded-2xl sm:w-[350px]  w-full">
         <div className="relative w-full h-[230px] ">
           <img
@@ -58,7 +63,7 @@ const ProjectCard = ({ index, project }) => {
 }
 
 const Works = () => {
-  const [index, setIndex] = useState(3)
+  const [indexed, setIndex] = useState(11)
   return (
     <>
       <motion.div
@@ -86,22 +91,41 @@ const Works = () => {
         </motion.p>
       </div>
       <ul className="list-reset flex justify-center mt-10 gap-5">
-        <Tab text="Major Porjects" num={3} setIndex={setIndex} index={index} />
-        <Tab text="Style Projects" num={6} setIndex={setIndex} index={index} />
-        <Tab text="Small and Sweet" num={9} setIndex={setIndex} index={index} />
+        <Tab text="New Projects" num={11} setIndex={setIndex} index={indexed} />
+        <Tab
+          text="Major Porjects"
+          num={3}
+          setIndex={setIndex}
+          index={indexed}
+        />
+        <Tab
+          text="Style Projects"
+          num={6}
+          setIndex={setIndex}
+          index={indexed}
+        />
+        <Tab
+          text="Small and Sweet"
+          num={9}
+          setIndex={setIndex}
+          index={indexed}
+        />
       </ul>
 
       <div className="mt-20 flex flex-wrap gap-8">
         {projects
           .filter((p) => {
-            if (index === 3) {
-              return index >= p.id
+            if (indexed === 3) {
+              return indexed >= p.id
             }
-            if (index === 6) {
-              return index <= p.id + 2 && index >= p.id
+            if (indexed === 6) {
+              return indexed <= p.id + 2 && indexed >= p.id
             }
-            if (index === 9) {
-              return index <= p.id + 2
+            if (indexed === 9) {
+              return indexed <= p.id + 2
+            }
+            if (indexed === 11) {
+              return indexed <= p.id + 2
             }
           })
           .map((project, index) => (
@@ -109,6 +133,7 @@ const Works = () => {
               key={`project-${index}`}
               project={project}
               index={index}
+              indexed={indexed}
             />
           ))}
       </div>
