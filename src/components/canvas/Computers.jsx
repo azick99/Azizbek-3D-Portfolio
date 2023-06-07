@@ -1,4 +1,4 @@
-import { Suspense} from "react";
+import { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 
@@ -9,7 +9,7 @@ const Computers = () => {
 
   return (
     <mesh>
-      <hemisphereLight intensity={0.15} groundColor='black' />
+      <hemisphereLight intensity={0.15} groundColor="black" />
       <spotLight
         position={[-30, 60, 15]}
         angle={0.12}
@@ -21,7 +21,7 @@ const Computers = () => {
       <pointLight intensity={1} />
       <primitive
         object={computer.scene}
-        scale={ 0.8}
+        scale={0.8}
         position={[0, -4.25, -1]}
         rotation={[-0.01, -0.2, -0.05]}
       />
@@ -30,15 +30,18 @@ const Computers = () => {
 };
 
 const ComputersCanvas = () => {
-
-
   return (
     <Canvas
-      frameloop='demand'
+      frameloop="demand"
       shadows
       dpr={[1, 2]}
       camera={{ position: [20, 1, 3], fov: 35 }}
-      gl={{ preserveDrawingBuffer: true }}
+      gl={{
+        preserveDrawingBuffer: true,
+        powerPreference: "high-performance", // Improve performance on some devices
+      }}
+      concurrent // Enable concurrent rendering
+      shadowMap // Enable optimized shadow mapping
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
