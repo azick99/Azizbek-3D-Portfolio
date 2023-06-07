@@ -22,8 +22,8 @@ import typescript from './tech/typescript.png'
 import threejs from './tech/threejs.svg'
 import download from './download-solid.svg'
 import eductaion from './education.png'
-import graduationHat from './graduation-hat.png'
-import school from './school.png'
+import upwork from './upwork-small-logo.png'
+import computer from './computer.png'
 import website from './world-wide-web.png'
 
 
@@ -44,8 +44,8 @@ export {
   website,
   download,
   eductaion,
-  graduationHat,
-  school,
+  upwork,
+  computer,
   logo,
   logo2,
   backend,

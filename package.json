@@ -6,8 +6,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "predeploy":"npm run build",
-    "deploy":"gh-pages -d build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "vite build",
     "preview": "vite preview"
   },
@@ -25,11 +25,13 @@
     "maath": "^0.5.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-icons": "^4.9.0",
     "react-router-dom": "^6.8.2",
     "react-tilt": "^0.1.4",
     "react-vertical-timeline-component": "^3.6.0",
     "sass": "^1.60.0",
-    "three": "^0.150.1"
+    "three": "^0.150.1",
+    "tw-elements": "^1.0.0-beta2"
   },
   "devDependencies": {
     "@types/react": "^18.0.27",

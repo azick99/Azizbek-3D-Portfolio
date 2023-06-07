@@ -43,20 +43,26 @@ const About = () => {
           variants={fadeIn('left', 'tween', 0.5, 0.75)}
           className="mt-4 text-secondary text-[17px] leading-[30px] sm:pr-[80px] pr-[0] max-auto"
         >
-          I'm a <b className="text-[#915eff]">Front-end developer</b> with a
-          passion for creating beautiful, user-friendly websites. Although I
-          don't have any commercial work experience, I've spent
-          <b className="text-[#915eff]"> countless hours</b> honing my skills
-          and building my portfolio.
+          As an aspiring <b className="text-[#915eff]">Front-End Developer</b> ,
+          I am deeply passionate about creating engaging and interactive web
+          experiences that truly delight users. Currently, I am actively
+          expanding my knowledge and skills in front-end development, with a
+          focus on{' '}
+          <b className="text-[#915eff]">
+            TypeScript, JavaScript, React, and Redux.
+          </b>
           <br />
+          <br />I have gained practical, hands-on experience in these
+          technologies and am eager to apply them to{' '}
+          <b className="text-[#915eff]"> real-world projects </b>. My dedication
+          to continuous learning and staying up-to-date with the latest industry
+          trends and best practices drives me to excel in this dynamic field.
           <br />
-          My interest in web development started when I took an introductory
-          course in <b className="text-[#915eff]">HTML and CSS in college</b>. I
-          was immediately hooked and spent every spare moment working on
-          personal projects and learning new skills. Since then, I've become
-          proficient in
-          <b className="text-[#915eff]">JavaScript, React,</b> and other
-          front-end technologies.
+          <br />I have also gained practical experience through various
+          professional endeavors. During my 2.4-year (with breaks) internship as
+          an <b className="text-[#915eff]"> IT Assistant </b>, I had the
+          opportunity to assist professors in the Computer Science department
+          while boosting my web development skills.
           <br />
           <br />I know that there are lots of great things which I must{' '}
           <b className="text-[#915eff]">learn</b>, make mistakes and try hard to
@@ -65,11 +71,15 @@ const About = () => {
           <br />
           <DownloadButton />
         </motion.p>
-        <motion.div variants={fadeIn('right', 'tween', 0.5, 0.75)} className="right-about">
+        <motion.div
+          variants={fadeIn('right', 'tween', 0.5, 0.75)}
+          className="right-about"
+        >
           {completes.map((complete) => (
             <CompletedCard key={complete.text} complete={complete} />
           ))}
         </motion.div>
+      
       </div>
       <div className="mt-20 flex flex-wrap gap-10 sm:justify-center justify-start">
         {services.map((service, index) => (

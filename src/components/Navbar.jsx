@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { styles } from '../styles'
 import { navLinks } from '../constants'
-import {  logo, menu, close } from '../assets'
+import {  logo, menu, close, logo2 } from '../assets'
 
 const Navbar = () => {
   const [active, setActive] = useState('')
@@ -20,7 +20,7 @@ const Navbar = () => {
             window.scrollTo(0, 0)
           }}
         >
-          <img src={logo} alt="logo" className="w-10 h-10 object-contain" />
+          <img src={logo2} alt="logo" className="w-10 h-10 object-contain bg-white rounded-full" />
           <p className="text-white text-[18] font-bold cursor-pointer flex">
             Azizbek &nbsp; <span className="sm:block hidden">| &nbsp;Yunusaliev</span>
           </p>
@@ -49,9 +49,9 @@ const Navbar = () => {
           <div
             className={`${
               !toggle ? 'hidden' : 'flex'
-            } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w[140px] z-10 rounded-xl`}
+            } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w[140px] z-10 rounded-xl scale-up-tr`}
           >
-            <ul className="list-none flex justify-end items-start flex-col  gap-4">
+            <ul className="list-none flex justify-end items-start flex-col  gap-4 ">
               {navLinks.map((link) => (
                 <li
                   key={link.id}

@@ -4,7 +4,12 @@ import { SectionWrapper } from '../hoc'
 import { styles } from '../styles'
 import { fadeIn, textVariant } from '../utils/motion'
 import DownloadButton from './download-btn/DownloadButton'
-
+import {
+  SiFrontendmentor,
+  SiDiscord,
+  SiStackoverflow,
+  SiLinkedin,
+} from 'react-icons/si'
 const FeedbackCard = ({ title }) => {
   return (
     <motion.div
@@ -71,7 +76,40 @@ const AboutMe = () => {
       <div className={`${styles.paddingX} -mt-20 pb-14 flex flex-wrap gap-5`}>
         <FeedbackCard title="soft skills" />
         <FeedbackCard title="language" />
-      <DownloadButton text='about'/>
+        <div className="flex w-full justify-between flex-wrap sm:gap-y-0 gap-y-10">
+          <DownloadButton text="about" />
+          <div className="flex items-end pb-5 gap-x-5 w-1/2 justify-center ">
+            <a
+              href="https://www.linkedin.com/in/azizbek-yunusaliev-6b060b232/"
+              className="w-6"
+              target="_blank"
+            >
+              <SiLinkedin className="w-6 hover:fill-slate-500 transition" />
+            </a>
+
+            <a
+              href="https://www.frontendmentor.io/profile/azick99"
+              className="w-6"
+              target="_blank"
+            >
+              <SiFrontendmentor className="w-6 hover:fill-slate-500 transition" />
+            </a>
+            <a
+              href="https://discord.com/Azick_com#0764"
+              className="w-6"
+              target="_blank"
+            >
+              <SiDiscord className="w-6 hover:fill-slate-500 transition" />
+            </a>
+            <a
+              href="https://discord.com/Azick_com#0764"
+              className="w-6"
+              target="_blank"
+            >
+              <SiStackoverflow className="w-6 hover:fill-slate-500 transition" />
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   )

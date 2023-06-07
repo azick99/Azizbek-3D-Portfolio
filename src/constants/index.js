@@ -13,8 +13,6 @@ import {
   figma,
   threejs,
   eductaion,
-  school,
-  graduationHat,
   crown,
   space,
   sneakers,
@@ -27,6 +25,8 @@ import {
   multi,
   shorten,
   portfolio,
+  computer,
+  upwork,
 } from '../assets'
 
 export const navLinks = [
@@ -89,7 +89,7 @@ const techProgresses = [
   },
   {
     name: 'CSS3',
-    percent: 68,
+    percent: 75,
   },
   {
     name: 'JAVASCRIPT',
@@ -97,15 +97,15 @@ const techProgresses = [
   },
   {
     name: 'REACT JS',
-    percent: 65,
+    percent: 75,
   },
   {
     name: 'TYPESCRIPT',
-    percent: 30,
+    percent: 45,
   },
   {
     name: 'TAILWIND',
-    percent: 45,
+    percent: 70,
   },
 ]
 
@@ -154,16 +154,16 @@ const technologies = [
 
 const experiences = [
   {
-    title: 'IELTS teacher',
-    company_name: 'The 16th school of Andijan, Uzbekistan',
-    icon: school,
+    title: 'Assistant in IT sector (Internship) ',
+    company_name: 'Computer Technology collage of fergana',
+    icon: computer,
     iconBg: '#383E56',
-    date: ' November 2019 - June 2021',
+    date: ' May 2017 - August 2019',
     points: [
-      'Cultivated welcoming learning environments in both classroom and online context.',
-      'Developed lectures and assignments centered on literary and writing fundamentals.',
-      'Interpreted literature and essays in context with modern technology to promote critical thinking.',
-      'Helped students to achieve their academic goals. ( IELTS and entering prestigious university of Uzbekistan).',
+      ' Assisted professors of Computer Science at college, providing support and assistance in various tasks.',
+      'Developed skills in web development, including HTML5, CSS3, and JavaScript.',
+      'Gained knowledge in both software and hardware aspects of computers.',
+      'Helped students to understand difficult themes that I learnt.',
     ],
   },
   {
@@ -180,16 +180,16 @@ const experiences = [
     ],
   },
   {
-    title: 'ENGLISH TEACHER',
-    company_name: 'The 22th school of Andijan, Uzbekistan',
-    icon: graduationHat,
+    title: 'Self-employed Web developer',
+    company_name: 'Upwork and fiverr freelance market',
+    icon: upwork,
     iconBg: '#383E56',
-    date: 'August 2021 - October 2021',
+    date: 'May 2023 - Present',
     points: [
-      'Interpreted literature and essays in context with modern technology to promote critical thinking.',
-      'Helped students to achieve their academic goals. ( IELTS and entering prestigious university of Uzbekistan).',
-      "Working and boosting students' English knowledge and outlook.",
-      'Organizing special events to attract students to English.',
+      'Creating user-friendly web apps and web pages.',
+      ' Utilized modern frameworks and JavaScript programming languages such as Tailwind CSS and React.',
+      "Delivered high-quality web services tailored to clients' specific requirements.",
+      'Coding readable codes and intagrating it to real world porjects.',
     ],
   },
 ]
@@ -264,7 +264,7 @@ const projects = [
       },
     ],
     image: crown,
-    url: 'https://whimsical-cendol-8c17e3.netlify.app',
+    url: 'https://clothing-e-commerce-web.netlify.app/',
     source_code_link: 'https://github.com/azick99/Clothing-shop',
   },
   {
@@ -341,7 +341,7 @@ const projects = [
       },
     ],
     image: gpt,
-    url: 'https://magnificent-cucurucho-c14116.netlify.app',
+    url: 'https://chat-gpt-web.netlify.app',
     source_code_link: 'https://github.com/azick99/gpt-azicom',
   },
   {
@@ -364,7 +364,7 @@ const projects = [
       },
     ],
     image: bookmark,
-    url: 'https://glittering-kangaroo-f0347f.netlify.app/',
+    url: 'https://home-landing.netlify.app/',
     source_code_link: 'https://github.com/azick99/Book-mark-landing',
   },
   {
@@ -413,7 +413,7 @@ const projects = [
       },
     ],
     image: calculator,
-    url: 'https://spectacular-fox-9912be.netlify.app/',
+    url: 'https://tips-calculator-web.netlify.app/',
     source_code_link: 'https://github.com/azick99/tip-calculator',
   },
   {
@@ -490,7 +490,7 @@ const projects = [
       },
     ],
     image: multi,
-    url: 'https://radiant-maamoul-f5d488.netlify.app/',
+    url: 'https://multi-steps-form-web.netlify.app/',
     source_code_link: 'https://github.com/azick99/Multi-step-form',
   },
   {
@@ -513,7 +513,7 @@ const projects = [
       },
     ],
     image: shorten,
-    url: 'https://benevolent-swan-102734.netlify.app/',
+    url: 'https://shorten-url-web.netlify.app/',
     source_code_link: 'https://github.com/azick99/Shorten-Url',
   },
 
@@ -521,7 +521,7 @@ const projects = [
     id: projectId++,
     name: 'Sneakers Shop',
     description:
-      'E-commerce web App with user-friendly design and some features like home page counter, stripe card payment and auth.Light weight and it\'s still in the proccess of development that can improve its functionality.',
+      "E-commerce web App with user-friendly design and some features like home page counter, stripe card payment and auth.Light weight and it's still in the proccess of development that can improve its functionality.",
     tags: [
       {
         name: 'react',
@@ -541,7 +541,7 @@ const projects = [
       },
     ],
     image: sneakers,
-    url: 'https://effortless-cassata-2d5f5f.netlify.app/',
+    url: 'https://sneakers-and-clothes-shop.netlify.app',
     source_code_link: 'https://github.com/azick99/Sneakers-shop',
   },
 ]

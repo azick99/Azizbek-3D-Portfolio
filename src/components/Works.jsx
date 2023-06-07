@@ -88,7 +88,7 @@ const Works = () => {
           after rewview I didn't like it.
         </motion.p>
       </div>
-      <ul className="list-reset flex justify-center mt-10 gap-5">
+      <ul className="list-reset flex justify-center mt-10 gap-5 flex-wrap">
         <Tab text="New Projects" num={12} setIndex={setIndex} index={indexed} />
         <Tab
           text="Major Porjects"
