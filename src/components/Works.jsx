@@ -120,7 +120,7 @@ const Works = () => {
               return indexed <= p.id + 2 && indexed >= p.id
             }
             if (indexed === 9) {
-              return indexed <= p.id + 2 
+              return indexed <= p.id + 2  && indexed >= p.id
             }
             if (indexed === 12) {
               return indexed <= p.id + 2
