@@ -7,7 +7,6 @@ import useIsMobile from '../../utils/useIsMobile'
 
 const Computers = () => {
   const computer = useGLTF('./desktop_pc/scene.gltf')
-  const isMobile = useIsMobile()
 
   return (
     <mesh>
@@ -23,9 +22,9 @@ const Computers = () => {
       <pointLight intensity={1} />
       <primitive
         object={computer.scene}
-        scale={isMobile ? 0.55 : 0.8}
-        position={isMobile ? [0, -4.8, -1] : [0, -4.25, -1]}
-        rotation={isMobile ? [-0.01, -0.2, -0.05] : [-0.01, -0.2, -0.05]}
+        scale={0.8}
+        position={[0, -4.25, -1]}
+        rotation={[-0.01, -0.2, -0.05]}
       />
     </mesh>
   )
