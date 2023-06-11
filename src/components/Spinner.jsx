@@ -15,7 +15,7 @@ const Spinner = () => {
     <div
       className={`${
         isLoading ? 'flex' : 'hidden'
-      } items-center justify-center w-[98.6vw] h-[100vh] absolute mx-auto bg-black z-50`}
+      } items-center justify-center sm:w-[98.6vw] w-[100vw] h-[100vh] absolute mx-auto bg-black z-50`}
     >
       <div className="flex justify-center items-center space-x-1 text-sm white">
         <svg

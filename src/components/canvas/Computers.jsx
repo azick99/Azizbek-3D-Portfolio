@@ -1,11 +1,13 @@
-import { Suspense } from "react";
-import { Canvas } from "@react-three/fiber";
-import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
+import { Suspense } from 'react'
+import { Canvas } from '@react-three/fiber'
+import { OrbitControls, Preload, useGLTF } from '@react-three/drei'
 
-import CanvasLoader from "../Loader";
+import CanvasLoader from '../Loader'
+import useIsMobile from '../../utils/useIsMobile'
 
 const Computers = () => {
-  const computer = useGLTF("./desktop_pc/scene.gltf");
+  const computer = useGLTF('./desktop_pc/scene.gltf')
+  const isMobile = useIsMobile()
 
   return (
     <mesh>
@@ -21,13 +23,13 @@ const Computers = () => {
       <pointLight intensity={1} />
       <primitive
         object={computer.scene}
-        scale={0.8}
-        position={[0, -4.25, -1]}
-        rotation={[-0.01, -0.2, -0.05]}
+        scale={isMobile ? 0.55 : 0.8}
+        position={isMobile ? [0, -4.8, -1] : [0, -4.25, -1]}
+        rotation={isMobile ? [-0.01, -0.2, -0.05] : [-0.01, -0.2, -0.05]}
       />
     </mesh>
-  );
-};
+  )
+}
 
 const ComputersCanvas = () => {
   return (
@@ -38,7 +40,7 @@ const ComputersCanvas = () => {
       camera={{ position: [20, 1, 3], fov: 35 }}
       gl={{
         preserveDrawingBuffer: true,
-        powerPreference: "high-performance", // Improve performance on some devices
+        powerPreference: 'high-performance', // Improve performance on some devices
       }}
       concurrent // Enable concurrent rendering
       shadowMap // Enable optimized shadow mapping
@@ -54,7 +56,7 @@ const ComputersCanvas = () => {
 
       <Preload all />
     </Canvas>
-  );
-};
+  )
+}
 
-export default ComputersCanvas;
+export default ComputersCanvas

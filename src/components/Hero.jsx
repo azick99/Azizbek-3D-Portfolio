@@ -4,7 +4,7 @@ import useIsMobile from '../utils/useIsMobile'
 import { ComputersCanvas } from './canvas'
 
 const Hero = () => {
-const isMobile = useIsMobile()
+  const isMobile = useIsMobile()
 
   return (
     <section className="relative w-full h-screen mx-auto">
@@ -26,14 +26,10 @@ const isMobile = useIsMobile()
           </p>
         </div>
       </div>
-      {isMobile ? (
-        ''
-      ) : (
-          <ComputersCanvas />
-      )}
-      <div className="absolute xs:bottom-5 bottom-20 w-full flex justify-center items-center">
+        <ComputersCanvas />
+      <div className="absolute bottom-5  w-full flex justify-center items-center">
         <a href="#about">
-          <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
+          <div className="sm:w-[35px] sm:h-[64px] w-[30px] h-[58px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
             <motion.div
               animate={{ y: [0, 24, 0] }}
               transition={{
@@ -41,7 +37,7 @@ const isMobile = useIsMobile()
                 repeat: Infinity,
                 repeatType: 'loop',
               }}
-              className="w-3 h-3 rounded-full bg-secondary mb-1"
+              className="w-2 h-2 rounded-full bg-secondary mb-1"
             />
           </div>
         </a>

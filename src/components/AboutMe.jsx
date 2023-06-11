@@ -76,7 +76,7 @@ const AboutMe = () => {
       <div className={`${styles.paddingX} -mt-20 pb-14 flex flex-wrap gap-5`}>
         <FeedbackCard title="soft skills" />
         <FeedbackCard title="language" />
-        <div className="flex w-full justify-between flex-wrap sm:gap-y-0 gap-y-10">
+        <div className="flex w-full sm:justify-between justify-center flex-wrap sm:gap-y-0 gap-y-10">
           <DownloadButton text="about" />
           <div className="flex items-end pb-5 gap-x-5 w-1/2 justify-center ">
             <a
