@@ -195,7 +195,7 @@ const experiences = [
     company_name: 'The 16th specialized school ',
     icon: graduate,
     iconBg: '#E6DEDD',
-    date: 'July 2019 - October 2021',
+    date: 'November 2019 - October 2021',
     points: [
       'Helped students to achieve their academic goals.',
       'Teaching with modern technology and promoted   students to critical thinking.',
