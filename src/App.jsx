@@ -10,12 +10,11 @@ import {
   StarsCanvas,
   AboutMe,
 } from './components'
-import Spinner from './components/Spinner'
+
 function App() {
   return (
     <BrowserRouter>
-      <Spinner />
-      <div className="reletive z-0 bg-primary">
+      <div className="reletive z-0 light:bg-primary bg-primary ">
         <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center ">
           <Navbar />
           <Hero />

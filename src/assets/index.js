@@ -20,12 +20,15 @@ import redux from './tech/redux.png'
 import tailwind from './tech/tailwind.png'
 import typescript from './tech/typescript.png'
 import threejs from './tech/threejs.svg'
+import next from './tech/next.png'
+import jest from './tech/jest.png'
+
 import download from './download-solid.svg'
 import eductaion from './education.png'
 import upwork from './upwork-small-logo.png'
 import computer from './computer.png'
+import graduate from './graduation-hat.png'
 import website from './world-wide-web.png'
-
 
 import crown from './project-img/crown-cothing.jpg'
 import gpt from './project-img/chat-gpt-web-app.jpg'
@@ -46,6 +49,8 @@ export {
   eductaion,
   upwork,
   computer,
+  graduate,
+  
   logo,
   logo2,
   backend,
@@ -68,7 +73,8 @@ export {
   tailwind,
   typescript,
   threejs,
-
+  next,
+  jest,
 
   crown,
   gpt,

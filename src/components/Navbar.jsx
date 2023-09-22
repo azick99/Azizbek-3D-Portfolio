@@ -2,14 +2,14 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { styles } from '../styles'
 import { navLinks } from '../constants'
-import {  logo, menu, close, logo2 } from '../assets'
+import { logo, menu, close, logo2 } from '../assets'
 
 const Navbar = () => {
   const [active, setActive] = useState('')
   const [toggle, setToggle] = useState(false)
   return (
     <nav
-      className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 bg-primary`}
+      className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 light:bg-primary bg-primary`}
     >
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
         <Link
@@ -20,9 +20,14 @@ const Navbar = () => {
             window.scrollTo(0, 0)
           }}
         >
-          <img src={logo2} alt="logo" className="w-10 h-10 object-contain bg-white rounded-full" />
+          <img
+            src={logo2}
+            alt="logo"
+            className="w-10 h-10 object-contain bg-white rounded-full"
+          />
           <p className="text-white text-[18] font-bold cursor-pointer flex">
-            Azizbek &nbsp; <span className="sm:block hidden">| &nbsp;Yunusaliev</span>
+            Azizbek &nbsp;{' '}
+            <span className="sm:block hidden">| &nbsp;Yunusaliev</span>
           </p>
         </Link>
         <ul className="list-none hidden sm:flex flex-row gap-10">

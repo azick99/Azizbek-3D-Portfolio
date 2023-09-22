@@ -27,6 +27,9 @@ import {
   portfolio,
   computer,
   upwork,
+  next,
+  jest,
+  graduate,
 } from '../assets'
 
 export const navLinks = [
@@ -85,7 +88,7 @@ const services = [
 const techProgresses = [
   {
     name: 'HTML5',
-    percent: 80,
+    percent: 78,
   },
   {
     name: 'CSS3',
@@ -97,11 +100,11 @@ const techProgresses = [
   },
   {
     name: 'REACT JS',
-    percent: 75,
+    percent: 80,
   },
   {
     name: 'TYPESCRIPT',
-    percent: 45,
+    percent: 68,
   },
   {
     name: 'TAILWIND',
@@ -150,6 +153,14 @@ const technologies = [
     name: 'figma',
     icon: figma,
   },
+  {
+    name: 'nextjs',
+    icon: next,
+  },
+  {
+    name: 'jest',
+    icon: jest,
+  },
 ]
 
 const experiences = [
@@ -177,6 +188,18 @@ const experiences = [
       'Attracting students ot learn English and Programming language.',
       'Working with library team.',
       'Organizing special events related to English.',
+    ],
+  },
+  {
+    title: 'IELTS TEACHER',
+    company_name: 'The 16th specialized school ',
+    icon: graduate,
+    iconBg: '#E6DEDD',
+    date: 'July 2019 - October 2021',
+    points: [
+      'Helped students to achieve their academic goals.',
+      'Teaching with modern technology and promoted   students to critical thinking.',
+      'Working with team.',
     ],
   },
   {
