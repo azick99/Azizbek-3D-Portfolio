@@ -16,7 +16,11 @@ type ProjectCardProps = {
 const ProjectCard = ({ index, project }: ProjectCardProps) => {
   const { name, description, image, source_code_link, tags, url } = project
   return (
-    <motion.div variants={fadeIn('up', 'spring', index * 0.5, 0.75)}>
+    <motion.div
+      variants={fadeIn('up', 'spring', index * 0.5, 0.75)}
+      initial="hidden"
+      animate="show"
+    >
       <div className="bg-tertiary p-5 rounded-2xl sm:w-[350px] relative  w-full">
         <div className="relative w-full h-[230px] ">
           <img
@@ -67,8 +71,29 @@ const ProjectCard = ({ index, project }: ProjectCardProps) => {
   )
 }
 
+const TAB_NEW = 12
+const TAB_MAJOR = 3
+const TAB_STYLE = 6
+const TAB_SMALL = 9
+
+const projectsForTab = (tab: number): Project[] => {
+  switch (tab) {
+    case TAB_MAJOR:
+      return projects.slice(0, 3)
+    case TAB_STYLE:
+      return projects.slice(3, 6)
+    case TAB_SMALL:
+      return projects.slice(6, 9)
+    case TAB_NEW:
+      return projects.slice(-3)
+    default:
+      return projects
+  }
+}
+
 const Works = () => {
-  const [indexed, setIndex] = useState(12)
+  const [indexed, setIndex] = useState(TAB_NEW)
+
   return (
     <>
       <motion.div
@@ -96,51 +121,40 @@ const Works = () => {
         </motion.p>
       </div>
       <ul className="list-reset flex justify-center mt-10 gap-5 flex-wrap">
-        <Tab text="New Projects" num={12} setIndex={setIndex} index={indexed} />
         <Tab
-          text="Major Porjects"
-          num={3}
+          text="New Projects"
+          num={TAB_NEW}
+          setIndex={setIndex}
+          index={indexed}
+        />
+        <Tab
+          text="Major Projects"
+          num={TAB_MAJOR}
           setIndex={setIndex}
           index={indexed}
         />
         <Tab
           text="Style Projects"
-          num={6}
+          num={TAB_STYLE}
           setIndex={setIndex}
           index={indexed}
         />
         <Tab
           text="Small and Sweet"
-          num={9}
+          num={TAB_SMALL}
           setIndex={setIndex}
           index={indexed}
         />
       </ul>
 
-      <div className="mt-20 flex flex-wrap gap-8">
-        {projects
-          .filter((p) => {
-            if (indexed === 3) {
-              return indexed >= p.id
-            }
-            if (indexed === 6) {
-              return indexed <= p.id + 2 && indexed >= p.id
-            }
-            if (indexed === 9) {
-              return indexed <= p.id + 2 && indexed >= p.id
-            }
-            if (indexed === 12) {
-              return indexed <= p.id + 2
-            }
-            return false
-          })
-          .map((project, index) => (
-            <ProjectCard
-              key={project.id}
-              project={project}
-              index={index}
-            />
-          ))}
+      <div className="mt-20 flex flex-wrap gap-8" key={indexed}>
+        {projectsForTab(indexed).map((project, index) => (
+          <ProjectCard
+            key={project.id}
+            project={project}
+            index={index}
+          />
+        ))}
       </div>
     </>
   )
