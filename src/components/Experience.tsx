@@ -6,10 +6,15 @@ import { motion } from 'framer-motion'
 import 'react-vertical-timeline-component/style.min.css'
 import { styles } from '../styles'
 import { experiences } from '../constants'
+import type { ExperienceItem } from '../constants'
 import { SectionWrapper } from '../hoc'
 import { textVariant } from '../utils/motion'
 
-const ExperienceCard = ({ experience }) => {
+type ExperienceCardProps = {
+  experience: ExperienceItem
+}
+
+const ExperienceCard = ({ experience }: ExperienceCardProps) => {
   const { title, iconBg, date, company_name, icon } = experience
   return (
     <VerticalTimelineElement
@@ -39,7 +44,7 @@ const ExperienceCard = ({ experience }) => {
       <ul className="mt-5 list-disc ml-5 space-y-2">
         {experience.points.map((point, index) => (
           <li
-            key={`expriance-point-${index}`}
+            key={`experience-point-${index}`}
             className="text-white-100 text-[14px] pl-1 tracking-wider"
           >
             {point}
@@ -59,8 +64,8 @@ const Experience = () => {
       </motion.div>
       <div className="mt-20 flex flex-col">
         <VerticalTimeline>
-          {experiences.map((experience, index) => (
-            <ExperienceCard key={index} experience={experience} />
+          {experiences.map((experience) => (
+            <ExperienceCard key={experience.title} experience={experience} />
           ))}
         </VerticalTimeline>
       </div>

@@ -1,7 +1,12 @@
 import { motion } from 'framer-motion'
+import type { TechProgress } from '../../constants'
 import './progress.style.scss'
 
-const Progress = ({ progress }) => {
+type ProgressProps = {
+  progress: TechProgress
+}
+
+const Progress = ({ progress }: ProgressProps) => {
   return (
     <div className="progress-bar">
       <p className="progress-title">{progress.name}</p>
@@ -13,7 +18,7 @@ const Progress = ({ progress }) => {
               width: `${progress.percent}%`,
             }}
             transition={{
-              duration: '1',
+              duration: 1,
             }}
           ></motion.span>
         </div>

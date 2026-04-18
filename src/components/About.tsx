@@ -1,22 +1,22 @@
 import { motion } from 'framer-motion'
 import { styles } from '../styles'
 import { completes, services } from '../constants'
+import type { ServiceItem } from '../constants'
 import { fadeIn, textVariant } from '../utils/motion'
 import { SectionWrapper } from '../hoc'
 import DownloadButton from './download-btn/DownloadButton'
 import CompletedCard from './project-card/CompletedCard'
 
-const ServiceCard = ({ index, title, icon }) => {
+type ServiceCardProps = ServiceItem & { index: number }
+
+const ServiceCard = ({ index, title, icon }: ServiceCardProps) => {
   return (
     <div className="xs:w-[250px] w-full">
       <motion.div
         variants={fadeIn('right', 'spring', 0.5 * index, 0.75)}
         className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
       >
-        <div
-          options={{ max: 65, scale: 2, speed: 150 }}
-          className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col"
-        >
+        <div className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col">
           <img src={icon} alt={title} className="w-16 h-16 object-contain" />
           <h3 className="text-white text-[20px] font-bold text-center">
             {title}
@@ -26,6 +26,7 @@ const ServiceCard = ({ index, title, icon }) => {
     </div>
   )
 }
+
 const About = () => {
   return (
     <>
@@ -41,7 +42,7 @@ const About = () => {
       <div className="about-container">
         <motion.p
           variants={fadeIn('left', 'tween', 0.5, 0.75)}
-          className="mt-4 text-secondary text-[17px] leading-[30px] sm:pr-[80px] pr-[0] max-auto"
+          className="mt-4 text-secondary text-[17px] leading-[30px] sm:pr-[80px] pr-[0] mx-auto"
         >
           Enthusiastic and dedicated{' '}
           <b className="text-[#915eff]">Front-End Developer</b> with a strong
@@ -54,8 +55,8 @@ const About = () => {
           <b className="text-[#915eff]">Jest</b> and creating{' '}
           <b className="text-[#915eff]">Next.js</b> projects with{' '}
           <b className="text-[#915eff]">TypeScript and Tailwind-CSS.</b> With
-          which, I can boost web perfomance, SEO and responsiveness, after,
-          I try to test large projects and make them{' '}
+          which, I can boost web perfomance, SEO and responsiveness, after, I try
+          to test large projects and make them{' '}
           <b className="text-[#915eff]">PWA.</b>
           <br />
           <br />I have gained practical, hands-on experience in these

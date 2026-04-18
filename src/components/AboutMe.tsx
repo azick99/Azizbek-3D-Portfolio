@@ -10,7 +10,12 @@ import {
   SiStackoverflow,
   SiLinkedin,
 } from 'react-icons/si'
-const FeedbackCard = ({ title }) => {
+
+type FeedbackCardProps = {
+  title: 'soft skills' | 'language'
+}
+
+const FeedbackCard = ({ title }: FeedbackCardProps) => {
   return (
     <motion.div
       variants={fadeIn('', 'spring', 0.5, 0)}
@@ -32,7 +37,7 @@ const FeedbackCard = ({ title }) => {
                         width: skill.percent,
                       }}
                       transition={{
-                        duration: '1',
+                        duration: 1,
                       }}
                     ></motion.span>
                   </div>
@@ -50,7 +55,7 @@ const FeedbackCard = ({ title }) => {
                         width: lang.percent,
                       }}
                       transition={{
-                        duration: '1',
+                        duration: 1,
                       }}
                     ></motion.span>
                   </div>
@@ -83,6 +88,7 @@ const AboutMe = () => {
               href="https://www.linkedin.com/in/azizbek-yunusaliev-6b060b232/"
               className="w-6"
               target="_blank"
+              rel="noreferrer"
             >
               <SiLinkedin className="w-6 hover:fill-slate-500 transition" />
             </a>
@@ -91,20 +97,25 @@ const AboutMe = () => {
               href="https://www.frontendmentor.io/profile/azick99"
               className="w-6"
               target="_blank"
+              rel="noreferrer"
             >
               <SiFrontendmentor className="w-6 hover:fill-slate-500 transition" />
             </a>
             <a
-              href="https://discord.com/Azick_com#0764"
+              href="https://discord.com/"
               className="w-6"
               target="_blank"
+              rel="noreferrer"
+              aria-label="Discord"
             >
               <SiDiscord className="w-6 hover:fill-slate-500 transition" />
             </a>
             <a
-              href="https://discord.com/Azick_com#0764"
+              href="https://stackoverflow.com/"
               className="w-6"
               target="_blank"
+              rel="noreferrer"
+              aria-label="Stack Overflow"
             >
               <SiStackoverflow className="w-6 hover:fill-slate-500 transition" />
             </a>
@@ -115,4 +126,4 @@ const AboutMe = () => {
   )
 }
 
-export default SectionWrapper(AboutMe, '')
+export default SectionWrapper(AboutMe, 'about-me')

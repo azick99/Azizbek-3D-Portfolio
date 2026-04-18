@@ -1,6 +1,11 @@
+import type { CompleteStat } from '../../constants'
 import './completed-card.style.scss'
 
-const CompletedCard = ({ complete }) => {
+type CompletedCardProps = {
+  complete: CompleteStat
+}
+
+const CompletedCard = ({ complete }: CompletedCardProps) => {
   return (
     <div className="about-item">
       <div className="abt-text">

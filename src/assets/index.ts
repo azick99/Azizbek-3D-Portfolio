@@ -50,7 +50,6 @@ export {
   upwork,
   computer,
   graduate,
-  
   logo,
   logo2,
   backend,
@@ -75,7 +74,6 @@ export {
   threejs,
   next,
   jest,
-
   crown,
   gpt,
   sneakers,

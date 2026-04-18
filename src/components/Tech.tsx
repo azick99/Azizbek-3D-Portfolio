@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 import { BallCanvas } from './canvas'
 import { SectionWrapper } from '../hoc'
 import { technologies, techProgresses } from '../constants'
-import { textVariant } from '../utils/motion.js'
+import { textVariant } from '../utils/motion'
 import { styles } from '../styles'
 import Progress from './progress/Progress'
 
@@ -24,12 +24,8 @@ const Tech = () => {
         </div>
       </motion.div>
       <motion.div variants={textVariant()} className="progress-bars">
-        {techProgresses.map((techProgress, index) => (
-          <Progress
-            key={techProgress.name}
-            progress={techProgress}
-            index={index}
-          />
+        {techProgresses.map((techProgress) => (
+          <Progress key={techProgress.name} progress={techProgress} />
         ))}
       </motion.div>
       <div className="sm:flex hidden flex-row flex-wrap justify-center gap-10">
@@ -43,4 +39,4 @@ const Tech = () => {
   )
 }
 
-export default SectionWrapper(Tech, '')
+export default SectionWrapper(Tech, 'skills')

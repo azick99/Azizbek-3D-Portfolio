@@ -1,6 +1,13 @@
 import './tab.scss'
 
-const Tab = ({ text, setIndex, index, num }) => {
+type TabProps = {
+  text: string
+  setIndex: (n: number) => void
+  index: number
+  num: number
+}
+
+const Tab = ({ text, setIndex, index, num }: TabProps) => {
   return (
     <li
       onClick={() => setIndex(num)}

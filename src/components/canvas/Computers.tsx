@@ -3,7 +3,6 @@ import { Canvas } from '@react-three/fiber'
 import { OrbitControls, Preload, useGLTF } from '@react-three/drei'
 
 import CanvasLoader from '../Loader'
-import useIsMobile from '../../utils/useIsMobile'
 
 const Computers = () => {
   const computer = useGLTF('./desktop_pc/scene.gltf')
@@ -39,10 +38,8 @@ const ComputersCanvas = () => {
       camera={{ position: [20, 1, 3], fov: 35 }}
       gl={{
         preserveDrawingBuffer: true,
-        powerPreference: 'high-performance', // Improve performance on some devices
+        powerPreference: 'high-performance',
       }}
-      concurrent // Enable concurrent rendering
-      shadowMap // Enable optimized shadow mapping
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
