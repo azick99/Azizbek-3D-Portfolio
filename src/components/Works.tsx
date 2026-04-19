@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { FiChevronDown, FiChevronUp } from "react-icons/fi";
 import { github, website } from "../assets";
 import type { Project } from "../constants";
 import { usePortfolioProjects } from "../hooks/usePortfolioProjects";
@@ -238,9 +239,22 @@ const Works = () => {
             <button
               type="button"
               onClick={() => setExpanded((prev) => !prev)}
-              className="w-full max-w-[520px] rounded-2xl bg-blue-600 px-6 py-4 text-center text-base font-semibold text-white shadow-lg transition hover:bg-blue-500"
+              className="flex w-80 items-center justify-center gap-2 rounded-2xl bg-tertiary px-6 py-4 text-center text-base font-semibold text-white shadow-lg transition hover:bg-tertiary/80 focus:outline-none focus:ring-2 focus:ring-primary"
+              aria-label={
+                expanded ? "Show fewer projects" : "Show more projects"
+              }
             >
-              {expanded ? "Show less" : "Show more"}
+              {expanded ? (
+                <>
+                  <FiChevronUp className="h-5 w-5" />
+                  Show less
+                </>
+              ) : (
+                <>
+                  <FiChevronDown className="h-5 w-5" />
+                  Show more
+                </>
+              )}
             </button>
           </div>
         );
