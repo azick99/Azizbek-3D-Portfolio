@@ -4,6 +4,7 @@ import { completes, services } from '../constants'
 import type { ServiceItem } from '../constants'
 import { fadeIn, textVariant } from '../utils/motion'
 import { SectionWrapper } from '../hoc'
+import { useSiteCv } from '../hooks/useSiteCv'
 import DownloadButton from './download-btn/DownloadButton'
 import CompletedCard from './project-card/CompletedCard'
 
@@ -28,6 +29,8 @@ const ServiceCard = ({ index, title, icon }: ServiceCardProps) => {
 }
 
 const About = () => {
+  const { cvHref, downloadName } = useSiteCv()
+
   return (
     <>
       <motion.div
@@ -70,7 +73,7 @@ const About = () => {
           be the best developer so now I am ready for all of challenges and
           difficulties in <b className="text-[#915eff]">my journey.</b>
           <br />
-          <DownloadButton />
+          <DownloadButton href={cvHref} downloadFileName={downloadName} />
         </motion.p>
         <motion.div
           variants={fadeIn('right', 'tween', 0.5, 0.75)}

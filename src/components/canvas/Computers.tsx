@@ -1,15 +1,18 @@
-import { Suspense } from 'react'
-import { Canvas } from '@react-three/fiber'
-import { OrbitControls, Preload, useGLTF } from '@react-three/drei'
-
-import CanvasLoader from '../Loader'
+import { Suspense } from "react";
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
+import useIsMobile from "../../utils/useIsMobile";
+import CanvasLoader from "../Loader";
 
 const Computers = () => {
-  const computer = useGLTF('./desktop_pc/scene.gltf')
+  const computer = useGLTF("./desktop_pc/scene.gltf");
 
   return (
     <mesh>
-      <hemisphereLight intensity={0.15} groundColor="black" />
+      <hemisphereLight
+        intensity={0.15}
+        groundColor="black"
+      />
       <spotLight
         position={[-30, 60, 15]}
         angle={0.12}
@@ -26,8 +29,8 @@ const Computers = () => {
         rotation={[-0.01, -0.2, -0.05]}
       />
     </mesh>
-  )
-}
+  );
+};
 
 const ComputersCanvas = () => {
   return (
@@ -35,10 +38,10 @@ const ComputersCanvas = () => {
       frameloop="demand"
       shadows
       dpr={[1, 2]}
-      camera={{ position: [20, 1, 3], fov: 35 }}
+      camera={{ position: useIsMobile(600) ? [30, 3, 6] : [25, 2, 5], fov: 35 }}
       gl={{
         preserveDrawingBuffer: true,
-        powerPreference: 'high-performance',
+        powerPreference: "high-performance",
       }}
     >
       <Suspense fallback={<CanvasLoader />}>
@@ -52,7 +55,7 @@ const ComputersCanvas = () => {
 
       <Preload all />
     </Canvas>
-  )
-}
+  );
+};
 
-export default ComputersCanvas
+export default ComputersCanvas;

@@ -1,33 +1,37 @@
-import { motion } from 'framer-motion'
-import { aboutMe } from '../constants'
-import { SectionWrapper } from '../hoc'
-import { styles } from '../styles'
-import { fadeIn, textVariant } from '../utils/motion'
-import DownloadButton from './download-btn/DownloadButton'
+import { motion } from "framer-motion";
+import { aboutMe } from "../constants";
+import { SectionWrapper } from "../hoc";
+import { styles } from "../styles";
+import { fadeIn, textVariant } from "../utils/motion";
+import { useSiteCv } from "../hooks/useSiteCv";
+import DownloadButton from "./download-btn/DownloadButton";
 import {
   SiFrontendmentor,
   SiDiscord,
   SiStackoverflow,
   SiLinkedin,
-} from 'react-icons/si'
+} from "react-icons/si";
 
 type FeedbackCardProps = {
-  title: 'soft skills' | 'language'
-}
+  title: "soft skills" | "language";
+};
 
 const FeedbackCard = ({ title }: FeedbackCardProps) => {
   return (
     <motion.div
-      variants={fadeIn('', 'spring', 0.5, 0)}
+      variants={fadeIn("", "spring", 0.5, 0)}
       className="bg-black-200 p-10 rounded-3xl xs:w-[450px] w-full"
     >
       <p className="text-white tracking-wider text-[25px] uppercase pb-4 border-b-[1px] border-secondary border-solid ">
         {title}
       </p>
       <div className="mt-5">
-        {title === 'soft skills'
+        {title === "soft skills"
           ? aboutMe.softSkills.map((skill) => (
-              <div className="progress-bar pb-2" key={skill.text}>
+              <div
+                className="progress-bar pb-2"
+                key={skill.text}
+              >
                 <p className="progress-title">{skill.text}</p>
                 <div className="progress-con">
                   <p className="prog-text">{skill.percent}</p>
@@ -45,7 +49,10 @@ const FeedbackCard = ({ title }: FeedbackCardProps) => {
               </div>
             ))
           : aboutMe.language.map((lang) => (
-              <div className="progress-bar pb-2" key={lang.text}>
+              <div
+                className="progress-bar pb-2"
+                key={lang.text}
+              >
                 <p className="progress-title">{lang.text}</p>
                 <div className="progress-con">
                   <p className="prog-text">{lang.percent}</p>
@@ -64,10 +71,12 @@ const FeedbackCard = ({ title }: FeedbackCardProps) => {
             ))}
       </div>
     </motion.div>
-  )
-}
+  );
+};
 
 const AboutMe = () => {
+  const { cvHref, downloadName } = useSiteCv();
+
   return (
     <div className="mt-12 bg-black-100 rounded-[20px]">
       <div
@@ -78,11 +87,17 @@ const AboutMe = () => {
           <h2 className={`${styles.heroHeadText}`}>Soft Skills</h2>
         </motion.div>
       </div>
-      <div className={`${styles.paddingX} -mt-20 pb-14 flex flex-wrap gap-5`}>
+      <div
+        className={`${styles.paddingX} -mt-20 pb-14 flex flex-wrap justify-between `}
+      >
         <FeedbackCard title="soft skills" />
         <FeedbackCard title="language" />
         <div className="flex w-full sm:justify-between justify-center flex-wrap sm:gap-y-0 gap-y-10">
-          <DownloadButton text="about" />
+          <DownloadButton
+            text="about"
+            href={cvHref}
+            downloadFileName={downloadName}
+          />
           <div className="flex items-end pb-5 gap-x-5 w-1/2 justify-center ">
             <a
               href="https://www.linkedin.com/in/azizbek-yunusaliev-6b060b232/"
@@ -123,7 +138,7 @@ const AboutMe = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default SectionWrapper(AboutMe, 'about-me')
+export default SectionWrapper(AboutMe, "about-me");

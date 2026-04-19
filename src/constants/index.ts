@@ -30,358 +30,375 @@ import {
   next,
   jest,
   graduate,
-} from '../assets'
+} from "../assets";
 
 export interface NavLink {
-  id: string
-  title: string
+  id: string;
+  title: string;
 }
 
 export interface CompleteStat {
-  number: number
-  text: string
-  subText: string
+  number: number;
+  text: string;
+  subText: string;
 }
 
 export interface ServiceItem {
-  title: string
-  icon: string
+  title: string;
+  icon: string;
 }
 
 export interface TechProgress {
-  name: string
-  percent: number
+  name: string;
+  percent: number;
 }
 
 export interface Technology {
-  name: string
-  icon: string
+  name: string;
+  icon: string;
 }
 
 export interface ExperienceItem {
-  title: string
-  company_name: string
-  icon: string
-  iconBg: string
-  date: string
-  points: string[]
+  title: string;
+  company_name: string;
+  icon: string;
+  iconBg: string;
+  date: string;
+  points: string[];
 }
 
 export interface ProjectTag {
-  name: string
-  color: string
+  name: string;
+  color: string;
 }
 
 export interface Project {
-  id: number
-  name: string
-  description: string
-  tags: ProjectTag[]
-  image: string
-  url: string
-  source_code_link: string
+  id: number;
+  name: string;
+  description: string;
+  tags: ProjectTag[];
+  image: string;
+  url: string;
+  source_code_link: string;
+  type:
+    | "New Projects"
+    | "Major Projects"
+    | "Style Projects"
+    | "Small and Sweet Projects";
 }
 
 export interface SkillBar {
-  text: string
-  percent: string
+  text: string;
+  percent: string;
 }
 
 export interface AboutMeData {
-  softSkills: SkillBar[]
-  language: SkillBar[]
+  softSkills: SkillBar[];
+  language: SkillBar[];
 }
 
 export const navLinks: NavLink[] = [
-  { id: 'about', title: 'About' },
-  { id: 'work', title: 'Work' },
-  { id: 'contact', title: 'Contact' },
-]
+  { id: "about", title: "About" },
+  { id: "work", title: "Work" },
+  { id: "contact", title: "Contact" },
+];
 
 export const completes: CompleteStat[] = [
-  { number: 20, text: 'projects', subText: 'completed' },
-  { number: 1, text: 'year', subText: 'none-comercial exeriance' },
-  { number: 2, text: 'clients', subText: 'number' },
-  { number: 10, text: 'costumer', subText: 'rewview' },
-]
+  { number: 20, text: "projects", subText: "completed" },
+  { number: 1, text: "year", subText: "none-comercial exeriance" },
+  { number: 2, text: "clients", subText: "number" },
+  { number: 10, text: "costumer", subText: "rewview" },
+];
 
 const services: ServiceItem[] = [
-  { title: 'Web Developer', icon: web },
-  { title: 'React Developer', icon: backend },
-  { title: 'Content Creator', icon: creator },
-]
+  { title: "Web Developer", icon: web },
+  { title: "React Developer", icon: backend },
+  { title: "Content Creator", icon: creator },
+];
 
 const techProgresses: TechProgress[] = [
-  { name: 'HTML5', percent: 78 },
-  { name: 'CSS3', percent: 75 },
-  { name: 'JAVASCRIPT', percent: 70 },
-  { name: 'REACT JS', percent: 80 },
-  { name: 'TYPESCRIPT', percent: 68 },
-  { name: 'TAILWIND', percent: 70 },
-]
+  { name: "HTML5", percent: 78 },
+  { name: "CSS3", percent: 75 },
+  { name: "JAVASCRIPT", percent: 70 },
+  { name: "REACT JS", percent: 80 },
+  { name: "TYPESCRIPT", percent: 68 },
+  { name: "TAILWIND", percent: 70 },
+];
 
 const technologies: Technology[] = [
-  { name: 'HTML 5', icon: html },
-  { name: 'CSS 3', icon: css },
-  { name: 'JavaScript', icon: javascript },
-  { name: 'TypeScript', icon: typescript },
-  { name: 'React JS', icon: reactjs },
-  { name: 'Redux Toolkit', icon: redux },
-  { name: 'Tailwind CSS', icon: tailwind },
-  { name: 'Three JS', icon: threejs },
-  { name: 'git', icon: git },
-  { name: 'figma', icon: figma },
-  { name: 'nextjs', icon: next },
-  { name: 'jest', icon: jest },
-]
+  { name: "HTML 5", icon: html },
+  { name: "CSS 3", icon: css },
+  { name: "JavaScript", icon: javascript },
+  { name: "TypeScript", icon: typescript },
+  { name: "React JS", icon: reactjs },
+  { name: "Redux Toolkit", icon: redux },
+  { name: "Tailwind CSS", icon: tailwind },
+  { name: "Three JS", icon: threejs },
+  { name: "git", icon: git },
+  { name: "figma", icon: figma },
+  { name: "nextjs", icon: next },
+  { name: "jest", icon: jest },
+];
 
 const experiences: ExperienceItem[] = [
   {
-    title: 'Assistant in IT sector (Internship) ',
-    company_name: 'Computer Technology college of fergana',
+    title: "Assistant in IT sector (Internship) ",
+    company_name: "Computer Technology college of fergana",
     icon: computer,
-    iconBg: '#383E56',
-    date: ' May 2017 - August 2019',
+    iconBg: "#383E56",
+    date: " May 2017 - August 2019",
     points: [
-      ' Assisted professors of Computer Science at college, providing support and assistance in various tasks.',
-      'Developed skills in web development, including HTML5, CSS3, and JavaScript.',
-      'Gained knowledge in both software and hardware aspects of computers.',
-      'Helped students to understand difficult themes that I learnt.',
+      " Assisted professors of Computer Science at college, providing support and assistance in various tasks.",
+      "Developed skills in web development, including HTML5, CSS3, and JavaScript.",
+      "Gained knowledge in both software and hardware aspects of computers.",
+      "Helped students to understand difficult themes that I learnt.",
     ],
   },
   {
-    title: 'Leader ( volunteer ) of National Library',
-    company_name: 'National Library, Uzbekistan',
+    title: "Leader ( volunteer ) of National Library",
+    company_name: "National Library, Uzbekistan",
     icon: eductaion,
-    iconBg: '#E6DEDD',
-    date: 'July 2019 - August 2021',
+    iconBg: "#E6DEDD",
+    date: "July 2019 - August 2021",
     points: [
-      'Leading speaking club.',
-      'Attracting students ot learn English and Programming language.',
-      'Working with library team.',
-      'Organizing special events related to English.',
+      "Leading speaking club.",
+      "Attracting students ot learn English and Programming language.",
+      "Working with library team.",
+      "Organizing special events related to English.",
     ],
   },
   {
-    title: 'IELTS TEACHER',
-    company_name: 'The 16th specialized school ',
+    title: "IELTS TEACHER",
+    company_name: "The 16th specialized school ",
     icon: graduate,
-    iconBg: '#E6DEDD',
-    date: 'November 2019 - October 2021',
+    iconBg: "#E6DEDD",
+    date: "November 2019 - October 2021",
     points: [
-      'Helped students to achieve their academic goals.',
-      'Teaching with modern technology and promoted   students to critical thinking.',
-      'Working with team.',
+      "Helped students to achieve their academic goals.",
+      "Teaching with modern technology and promoted   students to critical thinking.",
+      "Working with team.",
     ],
   },
   {
-    title: 'Self-employed Web developer',
-    company_name: 'Upwork and fiverr freelance market',
+    title: "Self-employed Web developer",
+    company_name: "Upwork and fiverr freelance market",
     icon: upwork,
-    iconBg: '#383E56',
-    date: 'May 2023 - Present',
+    iconBg: "#383E56",
+    date: "May 2023 - Present",
     points: [
-      'Creating user-friendly web apps and web pages.',
-      ' Utilized modern frameworks and JavaScript programming languages such as Tailwind CSS and React.',
+      "Creating user-friendly web apps and web pages.",
+      " Utilized modern frameworks and JavaScript programming languages such as Tailwind CSS and React.",
       "Delivered high-quality web services tailored to clients' specific requirements.",
-      'Coding readable codes and intagrating it to real world porjects.',
+      "Coding readable codes and intagrating it to real world porjects.",
     ],
   },
-]
+];
 
 const aboutMe: AboutMeData = {
   softSkills: [
-    { text: 'Communication', percent: '70%' },
-    { text: 'Teamwork', percent: '75%' },
-    { text: 'Problem-solving', percent: '60%' },
-    { text: 'Leadership', percent: '70%' },
+    { text: "Communication", percent: "70%" },
+    { text: "Teamwork", percent: "75%" },
+    { text: "Problem-solving", percent: "60%" },
+    { text: "Leadership", percent: "70%" },
   ],
   language: [
-    { text: 'English', percent: '65%' },
-    { text: 'Russian', percent: '70%' },
-    { text: 'Uzbek(native)', percent: '90%' },
-    { text: 'Polish(A1)', percent: '30%' },
+    { text: "English", percent: "65%" },
+    { text: "Russian", percent: "70%" },
+    { text: "Uzbek(native)", percent: "90%" },
+    { text: "Polish(A1)", percent: "30%" },
   ],
-}
+};
 
-let projectId = 1
+let projectId = 1;
 
 const projects: Project[] = [
   {
     id: projectId++,
-    name: 'Crown Clothing',
+    name: "Crown Clothing",
     description:
-      'Fully functional e-commerce web app with carts, payments and supported by database. Google Authorization is also available.',
+      "Fully functional e-commerce web app with carts, payments and supported by database. Google Authorization is also available.",
     tags: [
-      { name: 'react', color: 'blue-text-gradient' },
-      { name: 'firebase', color: 'orange-text-gradient' },
-      { name: 'redux', color: 'violet-text-gradient' },
-      { name: 'react-router', color: 'green-text-gradient' },
+      { name: "react", color: "blue-text-gradient" },
+      { name: "firebase", color: "orange-text-gradient" },
+      { name: "redux", color: "violet-text-gradient" },
+      { name: "react-router", color: "green-text-gradient" },
     ],
     image: crown,
-    url: 'https://clothing-e-commerce-web.netlify.app/',
-    source_code_link: 'https://github.com/azick99/Clothing-shop',
+    url: "https://clothing-e-commerce-web.netlify.app/",
+    source_code_link: "https://github.com/azick99/Clothing-shop",
+    type: "Major Projects",
   },
   {
     id: projectId++,
-    name: 'Space Tourism',
+    name: "Space Tourism",
     description:
-      'Brief information of space tourism working with design and layouts, it can be used as entrance for space information.',
+      "Brief information of space tourism working with design and layouts, it can be used as entrance for space information.",
     tags: [
-      { name: 'html5', color: 'orange-text-gradient' },
-      { name: 'sass', color: 'pink-text-gradient' },
-      { name: 'responsive', color: 'violet-text-gradient' },
-      { name: 'javascript', color: 'yellow-text-gradient' },
+      { name: "html5", color: "orange-text-gradient" },
+      { name: "sass", color: "pink-text-gradient" },
+      { name: "responsive", color: "violet-text-gradient" },
+      { name: "javascript", color: "yellow-text-gradient" },
     ],
     image: space,
-    url: 'https://azick99.github.io/Space-Tourism',
-    source_code_link: 'https://github.com/azick99/Space-Tourism',
+    url: "https://azick99.github.io/Space-Tourism",
+    source_code_link: "https://github.com/azick99/Space-Tourism",
+    type: "Style Projects",
   },
   {
     id: projectId++,
-    name: ' My Portflio 2.0',
+    name: " My Portflio 2.0",
     description:
-      'My first portfolio that I did, it is fully functional except forms well-designed and can switch dark, light mode. ',
+      "My first portfolio that I did, it is fully functional except forms well-designed and can switch dark, light mode. ",
     tags: [
-      { name: 'sass', color: 'pink-text-gradient' },
-      { name: 'responsive', color: 'violet-text-gradient' },
-      { name: 'javascript', color: 'yellow-text-gradient' },
-      { name: 'html5', color: 'orange-text-gradient' },
+      { name: "sass", color: "pink-text-gradient" },
+      { name: "responsive", color: "violet-text-gradient" },
+      { name: "javascript", color: "yellow-text-gradient" },
+      { name: "html5", color: "orange-text-gradient" },
     ],
     image: portfolio,
-    url: 'https://azick99.github.io/My-Portflio-2.0',
-    source_code_link: 'https://github.com/azick99/My-Portflio-2.0',
+    url: "https://azick99.github.io/My-Portflio-2.0",
+    source_code_link: "https://github.com/azick99/My-Portflio-2.0",
+    type: "Major Projects",
   },
   {
     id: projectId++,
-    name: 'Chat Gpt3',
+    name: "Chat Gpt3",
     description:
-      'Web app has no functionality only design and navigation, basic information about chat-gpt3.',
+      "Web app has no functionality only design and navigation, basic information about chat-gpt3.",
     tags: [
-      { name: 'react', color: 'blue-text-gradient' },
-      { name: 'responsive', color: 'violet-text-gradient' },
-      { name: 'sass', color: 'pink-text-gradient' },
+      { name: "react", color: "blue-text-gradient" },
+      { name: "responsive", color: "violet-text-gradient" },
+      { name: "sass", color: "pink-text-gradient" },
     ],
     image: gpt,
-    url: 'https://chat-gpt-web.netlify.app',
-    source_code_link: 'https://github.com/azick99/gpt-azicom',
+    url: "https://chat-gpt-web.netlify.app",
+    source_code_link: "https://github.com/azick99/gpt-azicom",
+    type: "Style Projects",
   },
   {
     id: projectId++,
-    name: 'Bookmark Landing',
+    name: "Bookmark Landing",
     description:
-      'Web page without functionality, a good temple to play around and see.',
+      "Web page without functionality, a good temple to play around and see.",
     tags: [
-      { name: 'sass', color: 'pink-text-gradient' },
-      { name: 'html5', color: 'blue-text-gradient' },
-      { name: 'responsive', color: 'violet-text-gradient' },
+      { name: "sass", color: "pink-text-gradient" },
+      { name: "html5", color: "blue-text-gradient" },
+      { name: "responsive", color: "violet-text-gradient" },
     ],
     image: bookmark,
-    url: 'https://home-landing.netlify.app/',
-    source_code_link: 'https://github.com/azick99/Book-mark-landing',
+    url: "https://home-landing.netlify.app/",
+    source_code_link: "https://github.com/azick99/Book-mark-landing",
+    type: "Style Projects",
   },
   {
     id: projectId++,
-    name: 'Intro landing',
-    description: 'Web page without functionality,with mobile navigation',
+    name: "Intro landing",
+    description: "Web page without functionality,with mobile navigation",
     tags: [
-      { name: 'sass', color: 'pink-text-gradient' },
-      { name: 'responsive', color: 'violet-text-gradient' },
-      { name: 'html5', color: 'blue-text-gradient' },
-      { name: 'javascript', color: 'orange-text-gradient' },
+      { name: "sass", color: "pink-text-gradient" },
+      { name: "responsive", color: "violet-text-gradient" },
+      { name: "html5", color: "blue-text-gradient" },
+      { name: "javascript", color: "orange-text-gradient" },
     ],
     image: intro,
-    url: 'https://azick99.github.io/Intro-with-drop-navigation',
-    source_code_link: 'https://github.com/azick99/Intro-with-drop-navigation',
+    url: "https://azick99.github.io/Intro-with-drop-navigation",
+    source_code_link: "https://github.com/azick99/Intro-with-drop-navigation",
+    type: "Style Projects",
   },
   {
     id: projectId++,
-    name: 'Tip Calculator',
+    name: "Tip Calculator",
     description:
-      'Small and handy tip calculator you can calculate percentage of tips and outputs easy and smoothly working.',
+      "Small and handy tip calculator you can calculate percentage of tips and outputs easy and smoothly working.",
     tags: [
-      { name: 'sass', color: 'pink-text-gradient' },
-      { name: 'responsive', color: 'violet-text-gradient' },
-      { name: 'react', color: 'blue-text-gradient' },
+      { name: "sass", color: "pink-text-gradient" },
+      { name: "responsive", color: "violet-text-gradient" },
+      { name: "react", color: "blue-text-gradient" },
     ],
     image: calculator,
-    url: 'https://tips-calculator-web.netlify.app/',
-    source_code_link: 'https://github.com/azick99/tip-calculator',
+    url: "https://tips-calculator-web.netlify.app/",
+    source_code_link: "https://github.com/azick99/tip-calculator",
+    type: "Small and Sweet Projects",
   },
   {
     id: projectId++,
-    name: 'News Homepage',
+    name: "News Homepage",
     description:
-      'Web page has no big functionality mainly styled some additon for mobile. Designed by front-mentor.',
+      "Web page has no big functionality mainly styled some additon for mobile. Designed by front-mentor.",
     tags: [
-      { name: 'responsive', color: 'violet-text-gradient' },
-      { name: 'sass', color: 'pink-text-gradient' },
-      { name: 'bootstrap5', color: 'blue-text-gradient' },
-      { name: 'html5', color: 'orange-text-gradient' },
+      { name: "responsive", color: "violet-text-gradient" },
+      { name: "sass", color: "pink-text-gradient" },
+      { name: "bootstrap5", color: "blue-text-gradient" },
+      { name: "html5", color: "orange-text-gradient" },
     ],
     image: news,
-    url: 'https://azick99.github.io/Home-page-news/',
-    source_code_link: 'https://github.com/azick99/Home-page-news',
+    url: "https://azick99.github.io/Home-page-news/",
+    source_code_link: "https://github.com/azick99/Home-page-news",
+    type: "Style Projects",
   },
   {
     id: projectId++,
-    name: 'Social Proof Section',
+    name: "Social Proof Section",
     description:
-      'Web page has no big functionality mainly styled some additon for mobile. Designed by front-mentor.',
+      "Web page has no big functionality mainly styled some additon for mobile. Designed by front-mentor.",
     tags: [
-      { name: 'responsive', color: 'violet-text-gradient' },
-      { name: 'w3_school(css framework)', color: 'green-text-gradient' },
-      { name: 'bootstrap5', color: 'blue-text-gradient' },
-      { name: 'html5', color: 'orange-text-gradient' },
+      { name: "responsive", color: "violet-text-gradient" },
+      { name: "w3_school(css framework)", color: "green-text-gradient" },
+      { name: "bootstrap5", color: "blue-text-gradient" },
+      { name: "html5", color: "orange-text-gradient" },
     ],
     image: social,
-    url: 'https://azick99.github.io/Social-proof-section/',
-    source_code_link: 'https://github.com/azick99/Social-proof-section',
+    url: "https://azick99.github.io/Social-proof-section/",
+    source_code_link: "https://github.com/azick99/Social-proof-section",
+    type: "Style Projects",
   },
   {
     id: projectId++,
-    name: 'Multi step form',
+    name: "Multi step form",
     description:
-      'Web app has all functionality, pretty user-friendly design and step by step form with smooth changing pages. User can come back pervious steps and it can be completed if user does not fill all of form field that required.  ',
+      "Web app has all functionality, pretty user-friendly design and step by step form with smooth changing pages. User can come back pervious steps and it can be completed if user does not fill all of form field that required.  ",
     tags: [
-      { name: 'react', color: 'blue-text-gradient' },
-      { name: 'responsive', color: 'violet-text-gradient' },
-      { name: 'sass', color: 'pink-text-gradient' },
+      { name: "react", color: "blue-text-gradient" },
+      { name: "responsive", color: "violet-text-gradient" },
+      { name: "sass", color: "pink-text-gradient" },
     ],
     image: multi,
-    url: 'https://multi-steps-form-web.netlify.app/',
-    source_code_link: 'https://github.com/azick99/Multi-step-form',
+    url: "https://multi-steps-form-web.netlify.app/",
+    source_code_link: "https://github.com/azick99/Multi-step-form",
+    type: "Major Projects",
   },
   {
     id: projectId++,
-    name: 'Shorten Url',
+    name: "Shorten Url",
     description:
-      'Web page is fully functional, well-designed page with working shortening input and smooth scroll animation in navigation. Web app can shorten long and ugly urls to short and better urls.',
+      "Web page is fully functional, well-designed page with working shortening input and smooth scroll animation in navigation. Web app can shorten long and ugly urls to short and better urls.",
     tags: [
-      { name: 'tailwind-css', color: 'blue-text-gradient' },
-      { name: 'react', color: 'green-text-gradient' },
-      { name: 'responsive', color: 'orange-text-gradient' },
+      { name: "tailwind-css", color: "blue-text-gradient" },
+      { name: "react", color: "green-text-gradient" },
+      { name: "responsive", color: "orange-text-gradient" },
     ],
     image: shorten,
-    url: 'https://shorten-url-web.netlify.app/',
-    source_code_link: 'https://github.com/azick99/Shorten-Url',
+    url: "https://shorten-url-web.netlify.app/",
+    source_code_link: "https://github.com/azick99/Shorten-Url",
+    type: "Major Projects",
   },
   {
     id: projectId++,
-    name: 'Sneakers Shop',
+    name: "Sneakers Shop",
     description:
       "E-commerce web App with user-friendly design and some features like home page counter, stripe card payment and auth.Light weight and it's still in the proccess of development that can improve its functionality.",
     tags: [
-      { name: 'react', color: 'blue-text-gradient' },
-      { name: 'firebase', color: 'orange-text-gradient' },
-      { name: 'sass', color: 'pink-text-gradient' },
-      { name: 'react-router', color: 'green-text-gradient' },
+      { name: "react", color: "blue-text-gradient" },
+      { name: "firebase", color: "orange-text-gradient" },
+      { name: "sass", color: "pink-text-gradient" },
+      { name: "react-router", color: "green-text-gradient" },
     ],
     image: sneakers,
-    url: 'https://sneakers-and-clothes-shop.netlify.app',
-    source_code_link: 'https://github.com/azick99/Sneakers-shop',
+    url: "https://sneakers-and-clothes-shop.netlify.app",
+    source_code_link: "https://github.com/azick99/Sneakers-shop",
+    type: "Major Projects",
   },
-]
+];
 
 export {
   services,
@@ -390,4 +407,4 @@ export {
   aboutMe,
   projects,
   techProgresses,
-}
+};

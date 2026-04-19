@@ -1,17 +1,27 @@
 import { download } from '../../assets'
 import './download-button.style.scss'
 
+const defaultHref = '/Azizbek_Yunusaliev_cv.pdf'
+const defaultDownload = 'Azizbek Yunusaliev CV.pdf'
+
 type DownloadButtonProps = {
   /** Extra class (e.g. `about` for width override in About section) */
   text?: string
+  /** When set (e.g. from Sanity), overrides the default CV path */
+  href?: string
+  downloadFileName?: string
 }
 
-const DownloadButton = ({ text }: DownloadButtonProps) => {
+const DownloadButton = ({
+  text,
+  href = defaultHref,
+  downloadFileName = defaultDownload,
+}: DownloadButtonProps) => {
   const className = ['download-btn', text].filter(Boolean).join(' ')
   return (
     <a
-      href="/Azizbek_Yunusaliev_cv.pdf"
-      download="Azizbek Yunusaliev CV.pdf"
+      href={href}
+      download={downloadFileName}
       target="_blank"
       rel="noreferrer"
       className={className}
@@ -21,7 +31,7 @@ const DownloadButton = ({ text }: DownloadButtonProps) => {
         <img
           src={download}
           alt="download-icon"
-          className="w-[24px] h-[24px]  "
+          className="h-[24px] w-[24px]"
         />
       </span>
     </a>
