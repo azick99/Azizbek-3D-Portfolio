@@ -14,6 +14,7 @@ type ProjectCardProps = {
 };
 
 const ProjectCard = ({ index, project }: ProjectCardProps) => {
+  const [expandedDesc, setExpandedDesc] = useState(false);
   const { name, description, image, source_code_link, tags, url } = project;
   return (
     <motion.div
@@ -22,7 +23,9 @@ const ProjectCard = ({ index, project }: ProjectCardProps) => {
       initial="hidden"
       animate="show"
     >
-      <article className="relative mx-auto flex h-full min-h-[28rem] w-full max-w-[350px] flex-col justify-between rounded-2xl bg-tertiary p-5 sm:w-[350px] md:mx-0">
+      <article
+        className={`relative mx-auto flex w-full max-w-[350px] flex-col justify-between rounded-2xl bg-tertiary p-5 sm:w-[350px] md:mx-0 ${expandedDesc ? "h-auto min-h-[36rem]" : "h-[36rem]"}`}
+      >
         <div className="relative h-[230px] w-full shrink-0">
           <img
             src={image}
@@ -58,7 +61,20 @@ const ProjectCard = ({ index, project }: ProjectCardProps) => {
         </div>
         <div className="mt-5 flex-1">
           <h3 className="text-[24px] font-bold text-white">{name}</h3>
-          <p className="mt-2 text-[14px] text-secondary">{description}</p>
+          <p
+            className={`mt-2 text-[14px] text-secondary transition-all ${expandedDesc ? "" : "line-clamp-5"}`}
+          >
+            {description}
+          </p>
+          {description.length > 150 && (
+            <button
+              type="button"
+              onClick={() => setExpandedDesc(!expandedDesc)}
+              className="mt-2 text-[12px] text-blue-400 hover:text-blue-300 transition"
+            >
+              {expandedDesc ? "Show less" : "... Show more"}
+            </button>
+          )}
         </div>
         <div className="mt-6 flex flex-wrap gap-2">
           {tags.map((tag) => (
