@@ -1,45 +1,46 @@
-import { useEffect, useState } from 'react'
-import type { Project } from '../constants'
-import { projects as fallbackProjects } from '../constants'
-import { isSanityConfigured } from '../sanity/client'
-import { fetchSanityProjects } from '../sanity/fetchPortfolio'
+import { useEffect, useState } from "react";
+import type { Project } from "../constants";
+import { isSanityConfigured } from "../sanity/client";
+import { fetchSanityProjects } from "../sanity/fetchPortfolio";
 
 export function usePortfolioProjects() {
-  const [projects, setProjects] = useState<Project[]>(fallbackProjects)
-  const [loading, setLoading] = useState(isSanityConfigured)
-  const [error, setError] = useState<string | null>(null)
+  const [projects, setProjects] = useState<Project[]>([]);
+  const [loading, setLoading] = useState(isSanityConfigured);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     if (!isSanityConfigured) {
-      setLoading(false)
-      return
+      setLoading(false);
+      return;
     }
 
-    let cancelled = false
-    setLoading(true)
+    let cancelled = false;
+    setLoading(true);
     fetchSanityProjects()
       .then((data) => {
-        if (cancelled) return
+        if (cancelled) return;
         if (data && data.length > 0) {
-          setProjects(data)
+          setProjects(data);
         } else if (data && data.length === 0) {
-          setProjects([])
+          setProjects([]);
         }
-        setError(null)
+        setError(null);
       })
       .catch(() => {
-        if (cancelled) return
-        setProjects(fallbackProjects)
-        setError('Could not load projects from Sanity. Showing local fallback.')
+        if (cancelled) return;
+        setProjects([]);
+        setError(
+          "Could not load projects from Sanity. Showing local fallback.",
+        );
       })
       .finally(() => {
-        if (!cancelled) setLoading(false)
-      })
+        if (!cancelled) setLoading(false);
+      });
 
     return () => {
-      cancelled = true
-    }
-  }, [])
+      cancelled = true;
+    };
+  }, []);
 
-  return { projects, loading, error }
+  return { projects, loading, error };
 }
