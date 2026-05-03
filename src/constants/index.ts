@@ -117,12 +117,14 @@ const services: ServiceItem[] = [
 ];
 
 const techProgresses: TechProgress[] = [
-  { name: "HTML5", percent: 78 },
+  { name: "HTML5", percent: 90 },
   { name: "CSS3", percent: 75 },
-  { name: "JAVASCRIPT", percent: 70 },
-  { name: "REACT JS", percent: 80 },
-  { name: "TYPESCRIPT", percent: 68 },
-  { name: "TAILWIND", percent: 70 },
+  { name: "JAVASCRIPT", percent: 80 },
+  { name: "REACT JS", percent: 85 },
+  { name: "TYPESCRIPT", percent: 70 },
+  { name: "TAILWIND", percent: 80 },
+  { name: "NEXT.JS", percent: 70 },
+
 ];
 
 const technologies: Technology[] = [
