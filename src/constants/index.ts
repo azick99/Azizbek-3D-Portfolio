@@ -111,7 +111,7 @@ export const completes: CompleteStat[] = [
 ];
 
 const services: ServiceItem[] = [
-  { title: "Web Developer", icon: web },
+  { title: "Software Developer", icon: web },
   { title: "React Developer", icon: backend },
   { title: "Content Creator", icon: creator },
 ];
@@ -124,7 +124,6 @@ const techProgresses: TechProgress[] = [
   { name: "TYPESCRIPT", percent: 70 },
   { name: "TAILWIND", percent: 80 },
   { name: "NEXT.JS", percent: 70 },
-
 ];
 
 const technologies: Technology[] = [
@@ -151,7 +150,7 @@ const experiences: ExperienceItem[] = [
     date: " May 2017 - August 2019",
     points: [
       " Assisted professors of Computer Science at college, providing support and assistance in various tasks.",
-      "Developed skills in web development, including HTML5, CSS3, and JavaScript.",
+      "Developed skills in software development, including HTML5, CSS3, and JavaScript.",
       "Gained knowledge in both software and hardware aspects of computers.",
       "Helped students to understand difficult themes that I learnt.",
     ],
@@ -182,7 +181,7 @@ const experiences: ExperienceItem[] = [
     ],
   },
   {
-    title: "Self-employed Web developer",
+    title: "Self-employed Software Developer",
     company_name: "Upwork and fiverr freelance market",
     icon: upwork,
     iconBg: "#383E56",
