@@ -1,13 +1,195 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" href="./favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Azizbek | Portfolio 3.0</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <!-- SVG favicon — Chrome 80+, Firefox, Safari 12+ -->
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/favicon.svg"
+    />
+    <!-- PNG fallbacks for older browsers -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/favicon-32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/favicon-16.png"
+    />
+    <!-- Apple home-screen icon (no radius — iOS adds it) -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/apple-touch-icon.png"
+    />
+    <!-- Safari pinned tab — must be a single-color SVG path -->
+    <link
+      rel="mask-icon"
+      href="/favicon.svg"
+      color="#3b5ff7"
+    />
+
+    <!-- PWA manifest -->
+    <link
+      rel="manifest"
+      href="/site.webmanifest"
+    />
+
+    <!-- Browser / OS chrome color — FIXED: was #0f766e (teal starter default) -->
+    <meta
+      name="theme-color"
+      content="#3b5ff7"
+    />
+    <!-- Windows tile -->
+    <meta
+      name="msapplication-TileColor"
+      content="#3b5ff7"
+    />
+
+    <!-- ── Primary SEO ──────────────────────────────────────────────── -->
+    <title>Azizbek Yunusaliev | Portfolio 3.0</title>
+    <meta
+      name="description"
+      content="Azizbek Yunusaliev is a passionate frontend developer specializing in React and TypeScript. With a keen eye for design and a commitment to clean, efficient code, Azizbek creates seamless user experiences that bring digital visions to life."
+    />
+    <meta
+      name="keywords"
+      content="frontend developer, React, TypeScript, web development, portfolio"
+    />
+    <meta
+      name="author"
+      content="Azizbek Yunusaliev"
+    />
+    <meta
+      name="robots"
+      content="index, follow"
+    />
+    <link
+      rel="canonical"
+      href="https://azizbek-3-d-portfolio.vercel.app/"
+    />
+
+    <!-- ── Open Graph (Facebook · LinkedIn · WhatsApp) ──────────────── -->
+    <!-- FIXED: og:url was pointing at /pwa-icon.svg  -->
+    <!-- FIXED: og:image must be a PNG (1200×630) — SVGs are not rendered by crawlers -->
+    <meta
+      property="og:type"
+      content="website"
+    />
+    <meta
+      property="og:url"
+      content="https://azizbek-3-d-portfolio.vercel.app/"
+    />
+    <meta
+      property="og:site_name"
+      content="AziStay"
+    />
+    <meta
+      property="og:locale"
+      content="en_US"
+    />
+    <meta
+      property="og:title"
+      content="Azizbek Yunusaliev | Portfolio 3.0"
+    />
+    <meta
+      property="og:description"
+      content="Azizbek Yunusaliev is a passionate frontend developer specializing in React and TypeScript. With a keen eye for design and a commitment to clean, efficient code, Azizbek creates seamless user experiences that bring digital visions to life."
+    />
+    <!-- PNG required — generate a 1200×630 social card and drop it in /public -->
+    <meta
+      property="og:image"
+      content="https://azizbek-3-d-portfolio.vercel.app/og-image.png"
+    />
+    <meta
+      property="og:image:type"
+      content="image/png"
+    />
+    <meta
+      property="og:image:width"
+      content="1200"
+    />
+    <meta
+      property="og:image:height"
+      content="630"
+    />
+    <meta
+      property="og:image:alt"
+      content="Azizbek Yunusaliev | Portfolio 3.0"
+    />
+
+    <meta
+      name="twitter:card"
+      content="summary_large_image"
+    />
+    <meta
+      name="twitter:site"
+      content="@azicom"
+    />
+    <meta
+      name="twitter:creator"
+      content="@azicom"
+    />
+    <meta
+      name="twitter:url"
+      content="https://azizbek-3-d-portfolio.vercel.app/"
+    />
+    <meta
+      name="twitter:title"
+      content="Azizbek Yunusaliev | Portfolio 3.0"
+    />
+    <meta
+      name="twitter:description"
+      content="Azizbek Yunusaliev is a passionate frontend developer specializing in React and TypeScript. With a keen eye for design and a commitment to clean, efficient code, Azizbek creates seamless user experiences that bring digital visions to life."
+    />
+    <meta
+      name="twitter:image"
+      content="https://azizbek-3-d-portfolio.vercel.app/og-image.png"
+    />
+    <meta
+      name="twitter:image:alt"
+      content="Azizbek Yunusaliev | Portfolio 3.0"
+    />
+
+    <!-- ── JSON-LD Structured Data — Google rich results ───────────── -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Azizbek Yunusaliev",
+        "url": "https://azizbek-3-d-portfolio.vercel.app",
+        "logo": "https://azizbek-3-d-portfolio.vercel.app/favicon.svg",
+        "description": "Azizbek Yunusaliev is a passionate frontend developer specializing in React and TypeScript. With a keen eye for design and a commitment to clean, efficient code, Azizbek creates seamless user experiences that bring digital visions to life.",
+        "sameAs": [
+          "https://twitter.com/azicom",
+          "https://instagram.com/azick99",
+          "https://www.facebook.com/profile.php?id=61589431857952"
+        ],
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://azizbek-3-d-portfolio.vercel.app/search?q={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <script
+      type="module"
+      src="/src/main.tsx"
+    ></script>
   </body>
 </html>
