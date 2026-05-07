@@ -21,9 +21,9 @@ const Navbar = () => {
           }}
         >
           <img
-            src="https://azizbek-3-d-portfolio.vercel.app/favicon.svg"
+            src="/android-chrome-192x192.png"
             alt="logo"
-            className="w-10 h-10 object-contain bg-white rounded-full"
+            className="w-10 h-10 object-contain rounded-full"
           />
           <p className="text-white text-[18px] font-bold cursor-pointer flex">
             Azizbek &nbsp;{" "}
