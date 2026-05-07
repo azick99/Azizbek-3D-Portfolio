@@ -1,12 +1,12 @@
-import { useState } from 'react'
-import { Link } from 'react-router-dom'
-import { styles } from '../styles'
-import { navLinks } from '../constants'
-import { logo2, menu, close } from '../assets'
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import { styles } from "../styles";
+import { navLinks } from "../constants";
+import { menu, close } from "../assets";
 
 const Navbar = () => {
-  const [active, setActive] = useState('')
-  const [toggle, setToggle] = useState(false)
+  const [active, setActive] = useState("");
+  const [toggle, setToggle] = useState(false);
   return (
     <nav
       className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 bg-primary`}
@@ -16,17 +16,17 @@ const Navbar = () => {
           to="/"
           className="flex items-center gap-2"
           onClick={() => {
-            setActive('')
-            window.scrollTo(0, 0)
+            setActive("");
+            window.scrollTo(0, 0);
           }}
         >
           <img
-            src={logo2}
+            src="https://azizbek-3-d-portfolio.vercel.app/favicon.svg"
             alt="logo"
             className="w-10 h-10 object-contain bg-white rounded-full"
           />
           <p className="text-white text-[18px] font-bold cursor-pointer flex">
-            Azizbek &nbsp;{' '}
+            Azizbek &nbsp;{" "}
             <span className="sm:block hidden">| &nbsp;Yunusaliev</span>
           </p>
         </Link>
@@ -35,7 +35,7 @@ const Navbar = () => {
             <li
               key={link.id}
               className={`${
-                active === link.id ? 'text-white' : 'text-secondary'
+                active === link.id ? "text-white" : "text-secondary"
               } hover:text-white text-[18px] font-medium cursor-pointer`}
               onClick={() => setActive(link.id)}
             >
@@ -53,7 +53,7 @@ const Navbar = () => {
 
           <div
             className={`${
-              !toggle ? 'hidden' : 'flex'
+              !toggle ? "hidden" : "flex"
             } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl scale-up-tr`}
           >
             <ul className="list-none flex justify-end items-start flex-col  gap-4 ">
@@ -61,11 +61,11 @@ const Navbar = () => {
                 <li
                   key={link.id}
                   className={`${
-                    active === link.id ? 'text-white' : 'text-secondary'
+                    active === link.id ? "text-white" : "text-secondary"
                   } font-poppins  font-medium cursor-pointer text-[16px]`}
                   onClick={() => {
-                    setActive(link.id)
-                    setToggle(false)
+                    setActive(link.id);
+                    setToggle(false);
                   }}
                 >
                   <a href={`#${link.id}`}>{link.title}</a>
@@ -76,7 +76,7 @@ const Navbar = () => {
         </div>
       </div>
     </nav>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
